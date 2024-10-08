@@ -1,0 +1,37 @@
+﻿@page "/userlist"
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject UserManager<IdentityUser> UserManager
+
+<h3>User List</h3>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var user in users)
+        {
+            <li>@user.UserName</li>
+        }
+    </ul>
+}
+
+@code {
+    private IList<IdentityUser> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            users = await UserManager.Users.ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            // Log or handle the exception as needed
+            Console.Error.WriteLine($"An error occurred: {ex.Message}");
+        }
+    }
+}

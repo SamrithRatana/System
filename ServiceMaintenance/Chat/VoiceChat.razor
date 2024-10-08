@@ -1,0 +1,62 @@
+﻿@page "/voice-chat"
+@using Microsoft.AspNetCore.SignalR.Client
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+
+<h1>Voice Chat</h1>
+
+<div>
+    <button @onclick="TestJavaScript">Start Recording</button>
+    <button @onclick="StopRecording">Stop Recording</button>
+</div>
+<div>
+    <audio id="audio-playback" controls></audio>
+</div>
+
+@code {
+    private DotNetObjectReference<VoiceChat> objRef;
+    private HubConnection voiceHubConnection;
+
+    protected override void OnInitialized()
+    {
+        objRef = DotNetObjectReference.Create(this);
+    }
+
+    private async Task StartRecording()
+    {
+        await JSRuntime.InvokeVoidAsync("startRecording", objRef);
+    }
+
+    private async Task StopRecording()
+    {
+        await JSRuntime.InvokeVoidAsync("stopRecording", objRef);
+    }
+    private async Task TestJavaScript()
+    {
+        await JSRuntime.InvokeVoidAsync("testFunction");
+    }
+
+    [JSInvokable]
+    public async Task SendAudioData(byte[] audioData)
+    {
+        await voiceHubConnection.SendAsync("SendVoiceMessage", audioData);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        voiceHubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/voiceHub"))
+            .Build();
+
+        voiceHubConnection.On<byte[]>("ReceiveVoiceMessage", HandleReceivedVoiceMessage);
+
+        await voiceHubConnection.StartAsync();
+    }
+
+    private void HandleReceivedVoiceMessage(byte[] audioData)
+    {
+        var base64String = Convert.ToBase64String(audioData);
+        var audioUrl = $"data:audio/wav;base64,{base64String}";
+        JSRuntime.InvokeVoidAsync("playAudio", audioUrl);
+    }
+}

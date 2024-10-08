@@ -1,0 +1,659 @@
+﻿<style>
+    /* General Button Styles */
+    .btn-modern {
+        background-color: #4CAF50; /* Green background */
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-modern:hover {
+        background-color: #45a049; /* Darker green */
+        transform: scale(1.05);
+    }
+
+    .btn-modern:active {
+        background-color: #3e8e41; /* Even darker green */
+        transform: scale(0.95);
+    }
+
+    .btn-modern.outlined {
+        background-color: transparent;
+        color: #4CAF50;
+        border: 2px solid #4CAF50;
+    }
+
+    .btn-modern.outlined:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .position-relative {
+        position: relative;
+    }
+    /* Button Icon */
+    .btn-icon {
+        background: transparent;
+        border: none;
+        color: #333; /* Dark color for the icon */
+        cursor: pointer;
+        font-size: 22px; /* Slightly larger for better visibility */
+        position: relative; /* For positioning the badge */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+    .btn-icon i {
+        font-size: 19px; /* Adjust icon size if needed */
+        color: #333; /* Icon color */
+    }
+
+        .btn-icon:hover {
+            color: #007bff; /* Highlight color on hover */
+        }
+
+    .notification-badge {
+        position: absolute;
+        top: -5px;
+        right: 1px;
+        background-color: #FF4C4C; /* Modern, vibrant red */
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px; /* Reduced padding for a smaller badge */
+        font-size: 10px; /* Smaller font size */
+        font-weight: 600; /* Bold to make it still readable */
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 10px; /* Smaller minimum width */
+        min-height: 16px; /* Smaller minimum height */
+    }
+
+    .btn-icon {
+        background: none;
+        border: none;
+        position: relative;
+        cursor: pointer;
+    }
+
+  
+
+
+    /* Avatar Styling */
+    .e-avatar {
+        flex-shrink: 0;
+    }
+
+    .e-avatar img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Text Content Styling */
+    .text-content {
+        margin-left: 10px;
+        flex-grow: 1;
+    }
+
+    .e-list-item-header {
+        font-weight: bold;
+        color: #333; /* Dark text color for header */
+    }
+
+    .e-list-content {
+        color: #555; /* Slightly lighter text color for content */
+    }
+
+    .timeStamp {
+        color: #888;
+        font-size: 12px;
+    }
+
+  
+    /* Notification Header Styling */
+    .notification-header {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        background-color: #f7f7f7;
+    }
+
+    .notification-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .btn-clear {
+        background: none;
+        border: none;
+        color: #007bff;
+        cursor: pointer;
+    }
+
+    .btn-clear:hover {
+        color: #0056b3; /* Darker shade on hover */
+    }
+
+    .notification-item {
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        align-items: center;
+    }
+    /* Notification Actions Styling */
+    .notification-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-action {
+        background: transparent;
+        border: none;
+        color: #007bff; /* Primary color for action buttons */
+        cursor: pointer;
+        font-size: 14px;
+        transition: color 0.2s ease;
+    }
+
+    .btn-action:hover {
+        color: #0056b3; /* Darker shade on hover */
+    }
+
+    .btn-action.mark-read {
+        color: #28a745; /* Green color for mark as read button */
+    }
+
+    .btn-action.delete {
+        color: #dc3545; /* Red color for delete button */
+    }
+
+    /* Notification Dropdown Styling */
+    .notification-dropdown {
+        width: 300px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 57px;
+        right: 240px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 400px;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+
+   .notification-dropdown.show {
+    display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Slide into view */
+}
+
+    /* Individual Notification Styling */
+    .notification {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .profile-picture-evelope {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .notification:last-child {
+        border-bottom: none;
+    }
+
+    .notification:hover {
+        background-color: #f5f5f5; /* Light gray background on hover */
+    }
+
+    /* Button Icon Styling */
+    .notification-btn-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: #333;
+        position: relative; /* Ensure the badge is positioned relative to this icon */
+        transition: color 0.3s; /* Smooth color transition */
+    }
+
+    .notification-btn-icon:hover {
+        color: #007bff; /* Highlight color on hover */
+    }
+
+    .badge {
+        position: absolute;
+        top: -2px; /* Adjusted top position for better visibility */
+        right: 0px; /* Adjusted right position for better visibility */
+        background-color: #dc3545; /* Red background for emphasis */
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px; /* Adjust padding for size */
+        font-size: 10px; /* Adjust font size for readability */
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    }
+
+    /* Notification Dropdown Menu Styling */
+    .notification-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 240px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Deeper shadow for contrast */
+        width: 500px;
+        max-height: 400px; /* Increased height for better visibility */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: scroll; /* Add vertical scrollbar */
+        z-index: 1050;
+        display: none;
+        transition: opacity 0.3s, transform 0.3s; /* Smooth transition effects */
+        opacity: 0;
+        transform: translateY(-10px); /* Subtle initial slide effect */
+    }
+
+    .notification-dropdown-menu.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0); /* Slide into view */
+    }
+
+    /* Dropdown Item Styling */
+    .dropdown-item {
+        padding: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Smooth background color transition */
+        border-radius: 8px; /* Rounded corners for items */
+    }
+
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1; /* Light grey background on hover */
+    }
+
+    .notification-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .notification-username {
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+
+    .notification-message {
+        font-size: 14px;
+        color: #555;
+    }
+    .notification-profile-picture {
+        margin-right: 15px; /* Increased spacing for modern look */
+    }
+
+    .profile-img {
+        width: 50px; /* Slightly larger size */
+        height: 50px; /* Consistent size */
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #e0e0e0; /* Subtle border for profile picture */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    }
+
+    .notification-text {
+        flex: 1;
+    }
+
+    .notification-text strong {
+        display: block;
+        font-weight: bold;
+    }
+
+    .notification-time {
+        font-size: 12px;
+        color: #888;
+    }
+ 
+
+</style>
+
+
+
+
+@using Microsoft.AspNetCore.SignalR.Client
+@using ServiceMaintenance.Services
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@using Syncfusion.Blazor.Lists
+
+
+<nav class="navbar header-navbar p-0 navbar-expand-md">
+    <!-- Toggler Button for Mobile View -->
+    <button class="navbar-toggler bg-primary d-block" @onclick="OnToggleClick" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse">
+        <div class="d-flex justify-content-between w-100">
+            <div class="d-flex align-items-center">
+                <!-- Logo -->
+                <a href="/" class="navbar-brand">
+                    <img src="./images/Cam-Logo-2.jpg" alt="Logo" class="navbar-logo" />
+                </a>
+
+                <!-- Button shown on larger screens -->
+                <DxButton RenderStyle="ButtonRenderStyle.None" CssClass="black-text d-none d-md-block" @onclick="ClickHome" Text="Service Checklist Management" />
+            </div>
+            <div class="d-flex justify-content-end">
+                <AuthorizeView>
+                    <Authorized Context="authContext">
+                        <!-- Manage Roles and Users Buttons -->
+                        <DxButton RenderStyle="ButtonRenderStyle.None" CssClass="black-text d-none d-md-block" @onclick="ClickRole" Text="Manage Roles" />
+                        <DxButton RenderStyle="ButtonRenderStyle.None" CssClass="black-text d-none d-md-block" @onclick="ClickUser" Text="Manage Users" />
+                        <!-- Additional buttons -->
+                        <DxButton RenderStyle="ButtonRenderStyle.None" CssClass=" hide-on-responsive"  IconCssClass="fas fa-file" />
+                        <DxButton RenderStyle="ButtonRenderStyle.None" CssClass=" hide-on-responsive" @onclick="ToggleDarkMode" IconCssClass="@GetToggleIconClass()" />
+
+                        
+                            <DxButton RenderStyle="ButtonRenderStyle.None" IconCssClass="fas fa-envelope" onclick="toggleDropdown()" />
+                            <div style="position: relative; display: inline-block; top: 13px">
+                                <span class="notification-badge" id="notificationBadge">0</span>
+                            </div>
+                          @*   <button class="btn-icon position-relative" onclick="toggleDropdown()">
+                                <i class="fas fa-envelope"></i>
+                                <span class="notification-badge" id="notificationBadge">0</span>
+                            </button> *@
+                            <div id="notificationDropdown" class="notification-dropdown">
+                                <div class="notification-header">
+                                    <span class="notification-title">Notifications</span>
+                                    <button class="btn-clear" onclick="clearNotifications()">Clear All</button>
+                                </div>
+                                <!-- Notifications area -->
+                                <div id="notificationArea"></div>
+                            </div>
+                      
+                        
+                        <DxButton RenderStyle="ButtonRenderStyle.None" IconCssClass="fas fa-bell" @onclick="ToggleNotificationDropdown" />
+                        <div style="position: relative; display: inline-block; top: 13px">
+                            @if (notificationCount > 0)
+                            {
+                                <span class="badge">@notificationCount</span>
+                            }
+                        </div>
+                        <div class="notification-dropdown-menu @notificationDropdownClass">
+                            @if (articles.Any())
+                            {
+                                @foreach (var notification in articles)
+                                {
+                                    <div class="dropdown-item">
+                                        <div class="notification-content">
+                                            <div class="notification-profile-picture">
+                                                @if (!string.IsNullOrEmpty(notification.ProfilePicture))
+                                                {
+                                                    <img src="data:image/png;base64,@notification.ProfilePicture" alt="@notification.Username" class="profile-img" />
+                                                }
+                                                else
+                                                {
+                                                    <img src="/images/default-profile.png" alt="@notification.Username" class="profile-img" />
+                                                }
+                                            </div>
+                                            <div class="notification-text">
+                                                <strong>@notification.Username</strong>
+                                                <p>@notification.ArticleHeading</p>
+                                                <span>@notification.ArticleContent</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="dropdown-item">
+                                    <p>No notifications.</p>
+                                </div>
+                            }
+                        </div>
+                        <button class=" btn-icon hide-on-responsive">
+                            Hello @userName!
+                        </button>
+                        <!-- User Profile -->
+                        @if (isSignedIn)
+                        {
+                            @if (userProfilePicture != null)
+                            {
+                                <button class=" btn-user hide-on-responsive" @onclick="ToggleProfileMenu">
+                                    <img src="data:image/*;base64,@(Convert.ToBase64String(userProfilePicture))" alt="Profile" class="user-img" />
+                                </button>
+                            }
+                            else
+                            {
+                                <button class=" btn-user hide-on-responsive" @onclick="ToggleProfileMenu">
+                                    <img src="./images/avatar.jpg" alt="Profile" class="user-img" />
+                                </button>
+                            }
+
+                            <div class="dropdown-menu @dropdownClass">
+                                <a href="/Identity/Account/Manage" class="dropdown-item">
+                                    <i class="fas fa-user dropdown-item-icon"></i> Profile
+                                </a>
+                                <a href="/Identity/Account/Manage" class="dropdown-item">
+                                    <i class="fas fa-cog dropdown-item-icon"></i> Settings
+                                </a>
+                                <a href="/Identity/Account/Logout" class="dropdown-item">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        }
+                    </Authorized>
+                    <NotAuthorized>
+                        <a class="btn-modern outlined" href="/identity/account/login">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login
+                        </a>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </div>
+        </div>
+    </div>
+</nav>
+@code {
+    private HubConnection hubConnection;
+    private string drawerClass => ToggleOn ? "show" : "";
+    private int notificationCount = 0; // Example notification count, adjust as needed
+    [Inject] private NavigationManager Navigation { get; set; }
+    private bool IsDarkMode { get; set; }
+    private bool IsProfileMenuVisible { get; set; }
+    private List<Article> articles = new List<Article>();
+    private string dropdownClass => IsProfileMenuVisible ? "show" : "";
+    [Parameter] public bool ToggleOn { get; set; }
+    [Parameter] public EventCallback<bool> ToggleOnChanged { get; set; }
+    @inject IJSRuntime JSRuntime
+    @inject AuthenticationStateProvider AuthenticationStateProvider
+    @inject UserManager<ApplicationUser> UserManager
+    private bool showNotificationDropdown = false;
+    private string notificationDropdownClass => showNotificationDropdown ? "show" : "";
+    private bool isSignedIn = false;
+    private string userName;
+    private byte[] userProfilePicture;
+    private string notificationMessage;
+
+    [Inject]
+    public IManufacturerService ManufacturerService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            isSignedIn = true;
+            var currentUser = await UserManager.GetUserAsync(user);
+            if (currentUser != null)
+            {
+                userName = currentUser.UserName;
+                userProfilePicture = currentUser.ProfilePicture;
+            }
+        }
+        hubConnection = new HubConnectionBuilder()
+           .WithUrl(Navigation.ToAbsoluteUri("/chatHub"))
+           .Build();
+        hubConnection = new HubConnectionBuilder()
+       .WithUrl(Navigation.ToAbsoluteUri("/NotificationHub"))
+       .Build();
+
+        hubConnection.On<string, string, string, string, string, int>("ReceiveMessage", async (user, message, timestamp, fileUrl, audioUrl, messageId) =>
+        {
+            notificationCount++;
+            await JSRuntime.InvokeVoidAsync("handleNewNotification", $"{user}: {message}", messageId);
+            await UpdateNotificationBadge();
+        });
+        hubConnection.On<string>("ReceiveNotification", (message) =>
+          {
+              notificationMessage = message;
+              StateHasChanged(); // Refresh the UI to show the notification
+          });
+
+        hubConnection.On<string, string, string, string>("sendToUser", (heading, content, username, base64ProfilePicture) =>
+    {
+        // Check if the notification is from the current user
+        if (username != userName)
+        {
+            articles.Add(new Article
+                {
+                    ArticleHeading = heading,
+                    ArticleContent = content,
+                    Username = username,
+                    ProfilePicture = base64ProfilePicture
+                });
+            notificationCount++;
+            InvokeAsync(StateHasChanged);
+        }
+    });
+
+        await hubConnection.StartAsync();
+    }
+    private void MarkAsRead()
+    {
+        // Implement the logic to mark a notification as read
+        Console.WriteLine("Notification marked as read.");
+    }
+
+    private void DeleteNotification()
+    {
+        // Implement the logic to delete a notification
+        Console.WriteLine("Notification deleted.");
+    }
+    private void ToggleNotificationDropdown()
+    {
+        showNotificationDropdown = !showNotificationDropdown;
+
+        // Reset the notification count when the dropdown is shown
+        if (showNotificationDropdown)
+        {
+            notificationCount = 0;
+        }
+
+        StateHasChanged();
+    }
+
+    private void ClearNotifications()
+    {
+        // Implement the logic to clear all notifications
+        Console.WriteLine("All notifications cleared.");
+    }
+    void ClickHome()
+    {
+        Navigation.NavigateTo("/");
+    }
+    void ClickRole()
+    {
+        Navigation.NavigateTo("/Roles");
+    }
+    void ClickUser()
+    {
+        Navigation.NavigateTo("/Users");
+    }
+    async Task ToggleDarkMode()
+    {
+        IsDarkMode = !IsDarkMode;
+        await ApplyDarkMode(); // Await the asynchronous method
+    }
+    private async Task UpdateNotificationBadge()
+    {
+        await JSRuntime.InvokeVoidAsync("updateNotificationBadge", notificationCount);
+    }
+
+    private void ShowNotificationDropdown()
+    {
+        JSRuntime.InvokeVoidAsync("showNotificationDropdown");
+    }
+    private async Task ApplyDarkMode()
+    {
+        if (IsDarkMode)
+        {
+            await JSRuntime.InvokeVoidAsync("applyDarkMode");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("applyLightMode");
+        }
+    }
+
+    private string GetToggleIconClass()
+    {
+        return IsDarkMode ? "fas fa-sun" : "fas fa-moon";
+    }
+
+    async Task OnToggleClick() => await Toggle();
+
+    async Task Toggle(bool? value = null)
+    {
+        var newValue = value ?? !ToggleOn;
+        if (ToggleOn != newValue)
+        {
+            ToggleOn = newValue;
+            await ToggleOnChanged.InvokeAsync(ToggleOn);
+        }
+    }
+
+    void ToggleProfileMenu()
+    {
+        IsProfileMenuVisible = !IsProfileMenuVisible;
+    }
+
+
+    void NavigateToMessages()
+    {
+        Navigation.NavigateTo("/messages"); // Navigate to the messages page
+    }
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+}

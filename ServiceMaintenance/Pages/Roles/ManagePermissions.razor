@@ -1,0 +1,244 @@
+﻿@page "/roles/manage-permissions/{RoleId}"
+@using ServiceMaintenance.Contants
+@inject RolesService RolesService
+@inject NavigationManager NavigationManager
+@inject IToastNotificationService ToastService
+@attribute [Authorize(Roles = "Admin")]
+
+<h3 class="text-center mb-4">Manage Permissions</h3>
+
+@if (isLoading)
+{
+    <p class="text-center">Loading...</p>
+}
+else
+{
+    <EditForm Model="@model" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <input type="hidden" @bind="@model.RoleId" />
+
+        <div class="row">
+            @if (model.RoleCalims != null && model.RoleCalims.Any())
+            {
+                var groupedPermissions = model.RoleCalims
+                .GroupBy(p => p.DisplayValue.Split('.')[1])
+                .OrderBy(g => g.Key);
+
+                foreach (var moduleGroup in groupedPermissions)
+                {
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card border-light shadow-lg rounded-lg">
+                            <div class="card-header d-flex justify-content-between align-items-center bg-light text-dark rounded-top">
+                                <h5 class="mb-0">@moduleGroup.Key</h5>
+                                <div class="dropdown">
+                                    <select class="custom-select-sm"
+                                            value="@moduleGroupDropdownSelection[moduleGroup.Key]"
+                                            @onchange="(e) => OnModuleStatusChanged(e, moduleGroup.Key)"
+                                            style="@GetDropdownStyle(moduleGroupDropdownSelection[moduleGroup.Key])">
+                                        <option value="true">Access</option>
+                                        <option value="false">No Access</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    @foreach (var permissionChunk in moduleGroup.Chunk(6))
+                                    {
+                                        foreach (var permission in permissionChunk)
+                                        {
+                                            var displayValueParts = permission.DisplayValue.Split('.');
+
+                                            if (displayValueParts.Length >= 3)
+                                            {
+                                                <div class="col-12 col-md-6 mb-3">
+                                                    <div class="form-check">
+                                                        <input type="checkbox"
+                                                               @onchange="(e) => OnCheckboxChanged(e, permission)"
+                                                               checked="@permission.IsSelected"
+                                                               class="form-check-input" />
+                                                        <label class="form-check-label">
+                                                            <i class="@PermissionIcons.GetIcon(permission.DisplayValue)"></i> @displayValueParts[2]
+                                                        </label>
+                                                        <input type="hidden" value="@permission.DisplayValue" />
+                                                    </div>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="col-12 text-danger">Invalid Display Value</div>
+                                            }
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <p class="text-center">No permissions found.</p>
+                </div>
+            }
+        </div>
+
+        <div class="mt-4 text-center">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a class="btn btn-secondary ms-2" href="/roles">Cancel</a>
+        </div>
+    </EditForm>
+}
+
+@code {
+    [Parameter]
+    public string RoleId { get; set; }
+
+    private PermissionsFormViewModel model = new PermissionsFormViewModel();
+    private bool isLoading = true;
+    private Dictionary<string, string> moduleGroupDropdownSelection = new Dictionary<string, string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            model = await RolesService.GetPermissionsAsync(RoleId);
+            var groupedPermissions = model.RoleCalims
+                .GroupBy(p => p.DisplayValue.Split('.')[1]);
+
+            foreach (var moduleGroup in groupedPermissions)
+            {
+                bool hasAccess = moduleGroup.Any(p => p.IsSelected);
+                moduleGroupDropdownSelection[moduleGroup.Key] = hasAccess ? "true" : "false";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error loading permissions: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await RolesService.UpdatePermissionsAsync(model);
+            ToastService.ShowToast(new ToastOptions
+                {
+                    ProviderName = "Overview",
+                    ThemeMode = ToastThemeMode.Saturated,
+                    RenderStyle = ToastRenderStyle.Success,
+                    Title = "Success",
+                    Text = "Permissions updated successfully."
+                });
+            NavigationManager.NavigateTo("/roles");
+        }
+        catch (Exception ex)
+        {
+            ToastService.ShowToast(new ToastOptions
+                {
+                    ProviderName = "Overview",
+                    ThemeMode = ToastThemeMode.Saturated,
+                    RenderStyle = ToastRenderStyle.Danger,
+                    Title = "Error",
+                    Text = $"An error occurred while updating permissions: {ex.Message}"
+                });
+        }
+    }
+
+    private void OnCheckboxChanged(ChangeEventArgs e, CheckBoxViewModel permission)
+    {
+        permission.IsSelected = (bool)e.Value;
+        var moduleName = permission.DisplayValue.Split('.')[1];
+        var moduleGroup = model.RoleCalims.Where(p => p.DisplayValue.Split('.')[1] == moduleName);
+        bool hasAccess = moduleGroup.Any(p => p.IsSelected);
+        moduleGroupDropdownSelection[moduleName] = hasAccess ? "true" : "false";
+    }
+
+    private void OnModuleStatusChanged(ChangeEventArgs e, string moduleName)
+    {
+        bool isAccess = e.Value.ToString() == "true";
+        foreach (var permission in model.RoleCalims.Where(p => p.DisplayValue.Split('.')[1] == moduleName))
+        {
+            permission.IsSelected = isAccess;
+        }
+
+        moduleGroupDropdownSelection[moduleName] = e.Value.ToString();
+    }
+
+    private string GetDropdownStyle(string value)
+    {
+        return value switch
+        {
+            "true" => "background-color: #28a745; color: white;",
+            "false" => "background-color: #dc3545; color: white;",
+            _ => "background-color: transparent;"
+        };
+    }
+}
+
+
+<style>
+    .custom-select-sm {
+        font-size: 0.75rem; /* Smaller font size */
+        padding: 0.25rem 0.5rem; /* Less padding */
+        border-radius: 1rem; /* Rounded corners */
+        height: auto; /* Adjust height automatically */
+        line-height: 1.25; /* Adjust line height */
+        border: 1px solid #ced4da; /* Border color similar to default styling */
+        color: #495057; /* Default text color */
+        cursor: pointer; /* Pointer cursor for dropdown */
+    }
+
+    .card {
+        background-color: #ffffff; /* Card background color */
+        border: 1px solid #e3e6ea; /* Card border color */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for card */
+        border-radius: 0.5rem; /* Rounded corners for card */
+    }
+
+    .card-header {
+        background-color: #f8f9fa; /* Light gray background */
+        color: #343a40; /* Darker text color */
+        border-bottom: 1px solid #e3e6ea; /* Border at the bottom of the header */
+        border-radius: 0.5rem 0.5rem 0 0; /* Rounded corners for the top */
+    }
+
+    .form-check-input:checked {
+        background-color: #28a745; /* Green checkbox checked color */
+        border-color: #28a745; /* Green checkbox border color */
+    }
+
+    .form-check-label i {
+        margin-right: 0.5rem; /* Space between icon and text */
+        color: #6c757d; /* Icon color */
+    }
+
+    .btn {
+        border-radius: 0.375rem; /* Rounded corners for buttons */
+    }
+
+    .text-center {
+        text-align: center; /* Center align text */
+    }
+
+    .ms-2 {
+        margin-left: 0.5rem; /* Space between buttons */
+    }
+
+    .btn-primary {
+        background-color: #007bff; /* Primary button background color */
+        border-color: #007bff; /* Primary button border color */
+    }
+
+    .btn-secondary {
+        background-color: #6c757d; /* Secondary button background color */
+        border-color: #6c757d; /* Secondary button border color */
+    }
+</style>

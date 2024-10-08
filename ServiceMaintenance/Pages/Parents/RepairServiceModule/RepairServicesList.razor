@@ -1,0 +1,514 @@
+﻿@page "/repairservices"
+@using DevExpress.XtraReports.UI
+@using Microsoft.AspNetCore.SignalR.Client
+@using ServiceMaintenance.Filters.GlobalSecurity
+@using ServiceMaintenance.Pages.Reports
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+@inject RepairItemService RepairItemService
+@inject StateManagementAction StateManagementAction
+@inject IToastNotificationService ToastNotificationService
+@inherits PermissionBase
+<DxToastProvider Name="Customization"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+<DxToastProvider Name="Error"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+<div class="card shadow-sm rounded-lg">
+    <div class="card-body">
+        <DxToolbar ItemRenderStyleMode="ToolbarRenderStyleMode.Plain">
+            <DxToolbarItem Text="New" Click="NewRepairService_Click" CssClass="toolbar-item" />
+            <DxToolbarItem Text="Edit" Click="EditRepairService_Click" CssClass="toolbar-item" />
+            <DxToolbarItem Text="Column Chooser" BeginGroup="true" IconCssClass="grid-toolbar-column-chooser" />
+            <DxToolbarItem Text="Export" IconCssClass="grid-toolbar-export">
+                <Items>
+                    <DxToolbarItem Text="To CSV" />
+                    <DxToolbarItem Text="To XLSX" />
+                    <DxToolbarItem Text="To XLS" />
+                </Items>
+            </DxToolbarItem>
+@*             <DxToolbarItem Text="Print Report" Click="PrintReport_Click" CssClass="toolbar-item" />
+ *@
+        </DxToolbar>
+    </div>
+</div>
+
+<hr>
+
+<div class="h-100 grid-wrapper">
+    @if (_repairServices == null)
+    {
+        <div class="card-body w-100">
+            <div class="card-header border-0 p-2 rounded">
+                <DxLoadingPanel IndicatorAnimationType="WaitIndicatorAnimationType.Pulse"
+                                CssClass="w-100"
+                                IndicatorVisible="@indicatorVisible"
+                                IndicatorAreaVisible="@indicatorAreaVisible"
+                                Visible="true"
+                                Text="Processing..."
+                                TextAlignment="LoadingPanelTextAlignment.Right">
+                    <div style="min-height: 250px;"></div>
+                </DxLoadingPanel>
+            </div>
+        </div>
+    }
+    else
+    {
+        <SfGrid @ref="MyGrid"
+                DataSource="@_repairServices"
+                AllowPaging="true"
+                AllowSorting="true"
+                ShowColumnChooser="true"
+                SelectionMode="GridSelectionMode.Single"
+                Toolbar=@ToolbarItems
+                RowSelected="RowSelectHandler">
+            <GridPageSettings PageSize="8"></GridPageSettings>
+            <GridColumns>              
+                <GridColumn Field="ServiceDate" HeaderText="Service Date" Width="150" Format="d" />
+                <GridColumn Field="CompanyName" HeaderText="Company Name" Width="200" />
+                <GridColumn Field="Address" HeaderText="Address" Width="200" />
+                <GridColumn Field="ContactName" HeaderText="Contact Name" Width="200" />
+                <GridColumn Field="PhoneNumber" HeaderText="Phone Number" Width="200" />
+                <GridColumn Field="itemName" HeaderText="Item Name" Width="200" />
+                <GridColumn Field="serialNumber" HeaderText="Serial Number" Width="200" />
+                <GridColumn Field="CustomerRequest" HeaderText="Customer Request" Width="250" />
+                <GridColumn Field="Inspection" HeaderText="Inspection" Width="250" />
+                <GridColumn Field="Solution" HeaderText="Solution" Width="250" />
+                <GridColumn Field="ServiceLocation" HeaderText="Service Location" Width="200" />
+                <GridColumn Field="ServiceType" HeaderText="Service Type" Width="150" />
+                <GridColumn Field="ServicePriority" HeaderText="Service Priority" Width="150" />
+                <GridColumn Field="Status" HeaderText="Status" Width="150" />
+               @*  <GridColumn HeaderText="Status" Width="250" IsFrozen="true" Freeze="FreezeDirection.Right" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center">
+                    <Template>
+                        @{
+                            var repairService = (RepairServices)context;
+                            var statusClass = string.Empty;
+                            var statusText = repairService.Status;
+                            var statusGif = string.Empty;
+
+                            switch (statusText)
+                            {
+                                case "Inspection":
+                                    statusClass = "status-inspection";
+                                    statusGif = "images/GIF/inspection.gif";
+                                    break;
+                                case "Awaiting Customer Confirm":
+                                    statusClass = "status-awaiting-confirm";
+                                    statusGif = "images/GIF/awaiting-confirm.gif";
+                                    break;
+                                case "Awaiting Sparepart":
+                                    statusClass = "status-awaiting-sparepart";
+                                    statusGif = "images/GIF/awaiting-sparepart.gif";
+                                    break;
+                                case "Repairing":
+                                    statusClass = "status-repairing";
+                                    statusGif = "images/GIF/repairing.gif";
+                                    break;
+                                case "Finished":
+                                    statusClass = "status-finished";
+                                    statusGif = "images/GIF/finished.gif";
+                                    break;
+                                case "Customer Rejected":
+                                    statusClass = "status-rejected";
+                                    statusGif = "images/GIF/rejected.gif";
+                                    break;
+                                case "Unrepairable":
+                                    statusClass = "status-unrepairable";
+                                    statusGif = "images/GIF/unrepairable.png";
+                                    break;
+                                default:
+                                    statusClass = "status-default"; // Optional default class
+                                    break;
+                            }
+                        }
+                        <span class="status-badge @statusClass">
+                            @repairService.Status
+                        </span>
+                        <img class="status-gif" src="@statusGif" alt="Status Icon" />
+                    </Template>
+                </GridColumn> *@
+            </GridColumns>
+        </SfGrid>
+
+
+
+        <SfDialog @ref="DialogDelete" IsModal="true" Width="250px" ShowCloseIcon="true" Visible="@isDeleteDialogVisible">
+            <DialogTemplates>
+                <Header>Confirm Delete</Header>
+                <Content>Please confirm that you want to delete this record.</Content>
+            </DialogTemplates>
+            <DialogButtons>
+                <DialogButton Content="Delete" IsPrimary="true" OnClick="ConfirmDeleteYes" />
+                <DialogButton Content="Cancel" OnClick="ConfirmDeleteNo" />
+            </DialogButtons>
+        </SfDialog>
+
+        <SfDialog @ref="DialogNoRecordSelected" IsModal="true" Width="250px" ShowCloseIcon="true" Visible="@isNoRecordDialogVisible">
+            <DialogTemplates>
+                <Header> Warning! </Header>
+                <Content> You must select a record. </Content>
+            </DialogTemplates>
+            <DialogButtons>
+                <DialogButton Content="OK" IsPrimary="true" OnClick="CloseDialogNoRecordSelected" />
+            </DialogButtons>
+        </SfDialog>
+
+        <SfDialog @ref="DialogEdit" IsModal="true" Width="1200px" ShowCloseIcon="true" Visible="@isEditDialogVisible">
+            <DialogTemplates>
+                <Header>
+                    <div class="dialog-header" style="position: relative;">>
+                        <h2>@pageTitle</h2>
+                        <button type="button" class="e-btn e-normal e-primary print-button" @onclick="ShowReportPreview" style="position: absolute; top: 0; right: 0; margin: 10px;">
+                            <span class="e-icons e-print"></span> Print Preview
+                        </button>
+                    </div>
+                </Header>
+            </DialogTemplates>
+            <EditForm Model="@_selectedRepairService" OnValidSubmit="Save">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+
+                <div class="form-grid">
+                    <div class="form-item">
+                        <SfDatePicker Placeholder="Service Date" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.ServiceDate"></SfDatePicker>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Company Name" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.CompanyName"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Address" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.Address"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Contact Name" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.ContactName"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Phone Number" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.PhoneNumber"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Customer Request" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.CustomerRequest"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Inspection" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.Inspection"></SfTextBox>
+                    </div>
+                    <div class="form-item">
+                        <SfTextBox Placeholder="Solution" FloatLabelType="FloatLabelType.Always" @bind-Value="_selectedRepairService.Solution"></SfTextBox>
+                    </div>
+                    <div class="form-item">                      
+                        <SfComboBox TValue="string" Placeholder="Service Location" FloatLabelType="FloatLabelType.Always" TItem="Location" @bind-Value="_selectedRepairService.ServiceLocation" DataSource="@Country" Width="100%">
+                            <ComboBoxFieldSettings Value="Name" Text="Name"></ComboBoxFieldSettings>
+                        </SfComboBox>
+                    </div>
+                    <div class="form-item">
+                        <SfComboBox TValue="Guid" Placeholder="Repair Item" FloatLabelType="FloatLabelType.Always"
+                                    TItem="Repairs" @bind-Value="_selectedRepairService.itemId" DataSource="@_repairItems"
+                                    Width="100%">
+                            <ComboBoxFieldSettings Value="Id" Text="ItemName"></ComboBoxFieldSettings>
+                        </SfComboBox>
+                    </div>
+                    <div class="form-item">
+                        <SfComboBox TValue="int" Placeholder="Service Type" FloatLabelType="FloatLabelType.Always" TItem="ServiceType" @bind-Value="_selectedRepairService.ServiceTypeId" DataSource="@_serviceTypes" Width="100%">
+                            <ComboBoxFieldSettings Value="Id" Text="Name"></ComboBoxFieldSettings>
+                        </SfComboBox>
+                    </div>
+                    <div class="form-item">
+                        <SfComboBox TValue="int" Placeholder="Service Priority" FloatLabelType="FloatLabelType.Always" TItem="ServicePriority" @bind-Value="_selectedRepairService.ServicePriorityId" DataSource="@_servicePriorities" Width="100%">
+                            <ComboBoxFieldSettings Value="Id" Text="Name"></ComboBoxFieldSettings>
+                        </SfComboBox>
+                    </div>
+                    <div class="form-item">
+                        <SfComboBox TValue="int" Placeholder="Service Status" FloatLabelType="FloatLabelType.Always" CssClass="small-font-combobox" TItem="ServiceStatus" @bind-Value="_selectedRepairService.StatusId" DataSource="@_serviceStatuses" Width="100%">
+                            <ComboBoxFieldSettings Value="Id" Text="Name"></ComboBoxFieldSettings>
+                        </SfComboBox>
+                    </div>
+                </div>
+                <div class="e-footer-content">
+                    <button type="submit" class="e-btn e-normal e-primary">Save</button>
+                    <button type="button" class="e-btn e-normal" @onclick="CancelEditDialog">Cancel</button>
+                </div>
+            </EditForm>
+        </SfDialog>
+        @if (ReportViewerVisible)
+        {
+            <DxReportViewer Report="@CurrentReport"  />
+        }
+    }
+</div>
+
+@code {
+    private SfGrid<RepairServices> MyGrid;
+    private SfDialog DialogDelete;
+    private SfDialog DialogNoRecordSelected;
+    private SfDialog DialogEdit;
+    private bool isEditDialogVisible = false;
+    private bool isDeleteDialogVisible = false;
+    private bool isNoRecordDialogVisible = false;
+        private bool isReportDialogVisible = false;
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    private string pageTitle = "Edit Repair Service";
+    private RepairServices _selectedRepairService = new RepairServices();
+    private IEnumerable<RepairServices> _repairServices;
+    ToastAnimationType Animation { get; set; } = ToastAnimationType.Slide;
+    private bool indicatorVisible = false;
+    private bool indicatorAreaVisible = true;
+    private IEnumerable<ServiceType> _serviceTypes;
+    private IEnumerable<ServicePriority> _servicePriorities;
+    private IEnumerable<ServiceStatus> _serviceStatuses;
+    private IEnumerable<Repairs> _repairItems;
+    private HubConnection hubConnection;
+    public class Location
+    {
+        public int Id    { get; set; }
+        public string Name { get; set; }     
+    }
+    List<Location> Country = new List<Location>
+    {
+        new Location() { Name = "OnSite" },
+        new Location() { Name = "CompanyService"},
+        
+    };
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _repairServices = await RepairItemService.GetAllRepairServicesAsync();
+            _serviceTypes = await RepairItemService.GetServiceTypesAsync();
+            _servicePriorities = await RepairItemService.GetServicePrioritiesAsync();
+            _serviceStatuses = await RepairItemService.GetServiceStatusesAsync();
+            _repairItems = await RepairItemService.GetRepairsAsync(); // Add this line
+
+        }
+        catch (Exception )
+        {
+          
+        }
+        // Establish SignalR connection
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/itemHub"))
+            .Build();
+
+        // Handle incoming data updates
+        hubConnection.On<string>("ReceiveItemUpdate", async (message) =>
+        {
+            // Fetch updated items whenever SignalR broadcasts
+            _repairServices = await RepairItemService.GetAllRepairServicesAsync();
+            await InvokeAsync(StateHasChanged);
+        });
+        // Handle item deletion event
+        hubConnection.On<Guid>("BroadcastItemDelete", (deletedItemId) =>
+        {
+            // Remove the deleted item from the local item list
+            _repairServices = _repairServices.Where(item => item.Id != deletedItemId).ToList();
+
+            // Refresh the UI
+            InvokeAsync(StateHasChanged);
+        });
+        // Start the SignalR connection
+        await hubConnection.StartAsync();
+    }
+    private void OnRepairItemSelected(Guid? selectedValue)
+    {
+        if (selectedValue.HasValue)
+        {
+            _selectedRepairService.itemId = selectedValue.Value;
+        }
+    }
+
+
+    private void NewRepairService_Click()
+    {
+        _selectedRepairService = new RepairServices();
+        pageTitle = "New Repair Service";
+        isEditDialogVisible = true;
+    }
+
+    private void EditRepairService(Guid id)
+    {
+        _selectedRepairService = _repairServices.FirstOrDefault(r => r.Id == id);
+        if (_selectedRepairService != null)
+        {
+            pageTitle = "Edit Repair Service";
+            isEditDialogVisible = true;
+        }
+        else
+        {
+            isNoRecordDialogVisible = true;
+        }
+    }
+    private void ShowReportPreview()
+    {
+        // Create an instance of your report
+        var report = new Report2();
+
+        // Set parameters from the _selectedRepairService object
+        report.SetParameters(_selectedRepairService,_selectedRepairService.ServiceLocation);
+        report.Parameters["CompanyName"].Visible = false;
+        report.Parameters["ContactName"].Visible = false;
+        report.Parameters["PhoneNumber"].Visible = false;
+        report.Parameters["Address"].Visible = false;
+        report.Parameters["ItemName"].Visible = false;
+        report.Parameters["SerialNumber"].Visible = false;
+        report.Parameters["CustomerRequest"].Visible = false;
+        report.Parameters["inspection"].Visible = false;
+        report.Parameters["Solution"].Visible = false;
+        report.Parameters["CompanyServiceChecked"].Visible = false;
+        report.Parameters["OnSiteChecked"].Visible = false;
+
+
+        // Assuming you have a DxReportViewer in your component
+        ReportViewerVisible = true; // Show the viewer
+        CurrentReport = report; // Set the current report to be displayed
+        isReportDialogVisible = true; // Show the report dialog
+        StateHasChanged(); // Trigger a re-render
+    }
+     private void CloseReportDialog()
+    {
+        isReportDialogVisible = false; // Hide the report dialog
+        StateHasChanged(); // Trigger a re-render
+    }
+    private bool ReportViewerVisible { get; set; }
+    private XtraReport CurrentReport { get; set; }
+
+    private void ConfirmDelete(Guid id)
+    {
+        _selectedRepairService = _repairServices.FirstOrDefault(r => r.Id == id);
+        if (_selectedRepairService != null)
+        {
+            isDeleteDialogVisible = true;
+        }
+        else
+        {
+            isNoRecordDialogVisible = true;
+        }
+    }
+
+    private async void ConfirmDeleteYes()
+    {
+        try
+        {
+            await RepairItemService.DeleteRepairServiceAsync(_selectedRepairService.Id);
+            await hubConnection.SendAsync("BroadcastItemDelete", _selectedRepairService.Id);
+            _repairServices = await RepairItemService.GetAllRepairServicesAsync();
+            ToastNotificationService.ShowToast(new ToastOptions
+                {
+                    ProviderName = "Customization",
+                    Title = "Success",
+                    Text = "Repair service deleted successfully",
+                    ThemeMode = ToastThemeMode.Pastel,
+                    RenderStyle = ToastRenderStyle.Success
+                });
+        }
+        catch (Exception )
+        {
+            
+        }
+        finally
+        {
+            isDeleteDialogVisible = false;
+        }
+    }
+    private void AddToast()
+    {
+        ToastNotificationService.ShowToast(new ToastOptions
+            {
+                ProviderName = "Customization",
+                Title = "System",
+                Text = "Successfully",
+                ThemeMode = ToastThemeMode.Pastel,
+                RenderStyle = ToastRenderStyle.Success
+
+            });
+    }
+    private async Task EditRepairService_Click()
+    {
+        var selectedRecords = await MyGrid.GetSelectedRecordsAsync();
+        var selectedRow = selectedRecords.FirstOrDefault();
+        if (selectedRow != null)
+        {
+            _selectedRepairService = (RepairServices)selectedRow;
+            pageTitle = "Edit Repair Service";
+            isEditDialogVisible = true;
+        }
+        else
+        {
+            isNoRecordDialogVisible = true;
+        }
+    }
+
+
+    private void ConfirmDeleteNo()
+    {
+        isDeleteDialogVisible = false;
+    }
+
+    private void CloseDialogNoRecordSelected()
+    {
+        isNoRecordDialogVisible = false;
+    }
+
+    private void CancelEditDialog()
+    {
+        isEditDialogVisible = false;
+    }
+
+    private async Task Save()
+    {
+        try
+        {
+            if (_selectedRepairService.Id == Guid.Empty)
+            {
+                await RepairItemService.CreateRepairServiceAsync(_selectedRepairService);
+                await hubConnection.SendAsync("BroadcastItemUpdate", "ItemCreated");
+                await StateManagementAction.SendNotificationAsync("create"); // Notify creation
+                AddToast();
+            }
+            else
+            {
+                await RepairItemService.UpdateRepairServiceAsync(_selectedRepairService);
+                await hubConnection.SendAsync("BroadcastItemUpdate", "ItemUpdated");
+                await StateManagementAction.SendNotificationAsync("update"); // Notify update
+                AddToast();
+            }
+
+            // Refresh data after save
+            _repairServices = await RepairItemService.GetAllRepairServicesAsync();
+            isEditDialogVisible = false;
+        }
+        catch (Exception ex)
+        {
+            // Handle exception
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+
+
+    private void RowSelectHandler(RowSelectEventArgs<RepairServices> args)
+    {
+        // Optional: handle row selection logic here
+    }
+
+   
+}
+<style>
+    .form-item {
+        width: 100%; /* Full width for form items */
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Default to two columns */
+        gap: 1rem; /* Space between grid items */
+    }
+
+    .small-font-combobox .e-input {
+        font-size: 12px; /* Set the desired small font size */
+    }
+
+</style>

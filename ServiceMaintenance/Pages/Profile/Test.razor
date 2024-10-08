@@ -1,0 +1,225 @@
+﻿@page "/settings"
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+
+
+
+<!-- CSS Files -->
+<link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('@BackgroundImage'); background-position-y: 50%;">
+        <span class="mask bg-gradient-primary opacity-6"></span>
+    </div>
+    <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
+        <div class="row gx-4">
+            <div class="col-auto">
+                <div class="avatar avatar-xl position-relative">
+                    <img src="@ProfileImage" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+                </div>
+            </div>
+            <div class="col-auto my-auto">
+                <div class="h-100">
+                    <h5 class="mb-1">@UserName</h5>
+                    <p class="mb-0 font-weight-bold text-sm">@UserRole</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Platform Settings</h6>
+                </div>
+                <div class="card-body p-3">
+                    <h6 class="text-uppercase text-body text-xs font-weight-bolder">Account</h6>
+                    <ul class="list-group">
+                        @foreach (var setting in AccountSettings)
+                        {
+                            <li class="list-group-item border-0 px-0">
+                                <div class="form-check form-switch ps-0">
+                                    <input class="form-check-input ms-auto" type="checkbox" @bind="setting.IsEnabled" id="@setting.Id" />
+                                    <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="@setting.Id">@setting.Label</label>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                    <h6 class="text-uppercase text-body text-xs font-weight-bolder mt-4">Application</h6>
+                    <ul class="list-group">
+                        @foreach (var appSetting in ApplicationSettings)
+                        {
+                            <li class="list-group-item border-0 px-0">
+                                <div class="form-check form-switch ps-0">
+                                    <input class="form-check-input ms-auto" type="checkbox" @bind="appSetting.IsEnabled" id="@appSetting.Id" />
+                                    <label class="form-check-label text-body ms-3 text-truncate w-80 mb-0" for="@appSetting.Id">@appSetting.Label</label>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <div class="row">
+                        <div class="col-md-8 d-flex align-items-center">
+                            <h6 class="mb-0">Profile Information</h6>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <a href="javascript:;">
+                                <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-3">
+                    <p class="text-sm">
+                        @profileInfo.Introduction
+                    </p>
+                    <hr class="horizontal gray-light my-4" />
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full Name:</strong> &nbsp; @profileInfo.FullName</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Mobile:</strong> &nbsp; @profileInfo.Mobile</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; @profileInfo.Email</li>
+                        <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Location:</strong> &nbsp; @profileInfo.Location</li>
+                        <li class="list-group-item border-0 ps-0 pb-0">
+                            <strong class="text-dark text-sm">Social:</strong> &nbsp;
+                            <a class="btn btn-facebook btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                                <i class="fab fa-facebook fa-lg"></i>
+                            </a>
+                            <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                            <a class="btn btn-instagram btn-simple mb-0 ps-1 pe-2 py-0" href="javascript:;">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="card h-100">
+                <div class="card-header pb-0 p-3">
+                    <h6 class="mb-0">Conversations</h6>
+                </div>
+                <div class="card-body p-3">
+                    <ul class="list-group">
+                        @foreach (var conversation in Conversations)
+                        {
+                            <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                                <div class="avatar me-3">
+                                    <img src="@conversation.AvatarUrl" alt="@conversation.Name" class="border-radius-lg shadow" />
+                                </div>
+                                <div class="d-flex align-items-start flex-column justify-content-center">
+                                    <h6 class="mb-0 text-sm">@conversation.Name</h6>
+                                    <p class="mb-0 text-xs">@conversation.Message</p>
+                                </div>
+                                <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto" href="javascript:;">Reply</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private string UserName;
+    private string ProfileImage = "defaultProfileImage.jpg"; // Set a default image if needed
+    private string UserRole;
+    public string BackgroundImage { get; set; } = "../assets/img/curved-images/curved0.jpg"; // Background image
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            UserName = user.Identity.Name; // Get the user's name
+            ProfileImage = user.FindFirst("ProfilePicture")?.Value ?? ProfileImage; // Get the profile picture from claims or use a default
+            UserRole = string.Join(", ", user.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value)); // Get user roles
+                                                                                                                  // Load profile info, account settings, application settings, and conversations here
+                                                                                                                  // Example: profileInfo = await userService.GetProfileInfoAsync(userId);
+        }
+        else
+        {
+            // Handle unauthenticated state (e.g., redirect to login page)
+        }
+    }
+    private string GetBase64ProfilePicture(byte[] imageBytes)
+    {
+        if (imageBytes == null || imageBytes.Length == 0)
+        {
+            return "data:image/png;base64,defaultBase64ImageString"; // Provide a default image string
+        }
+
+        return $"data:image/png;base64,{Convert.ToBase64String(imageBytes)}";
+    }
+
+    // Sample Data Models
+    private List<SettingModel> AccountSettings { get; set; } = new List<SettingModel>
+    {
+        new SettingModel { Id = "flexSwitchCheckDefault", Label = "Email me when someone follows me", IsEnabled = true },
+        new SettingModel { Id = "flexSwitchCheckDefault1", Label = "Email me when someone answers on my post", IsEnabled = false },
+        new SettingModel { Id = "flexSwitchCheckDefault2", Label = "Email me when someone mentions me", IsEnabled = true }
+    };
+
+    private List<SettingModel> ApplicationSettings { get; set; } = new List<SettingModel>
+    {
+        new SettingModel { Id = "flexSwitchCheckDefault3", Label = "New launches and projects", IsEnabled = false },
+        new SettingModel { Id = "flexSwitchCheckDefault4", Label = "Monthly product updates", IsEnabled = true },
+        new SettingModel { Id = "flexSwitchCheckDefault5", Label = "Subscribe to newsletter", IsEnabled = false }
+    };
+
+    private ProfileInfoModel profileInfo = new ProfileInfoModel
+        {
+            FullName = "Alec M. Thompson",
+            Mobile = "(44) 123 1234 123",
+            Email = "alecthompson@mail.com",
+            Location = "USA",
+            Introduction = "Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no."
+        };
+
+    private List<ConversationModel> Conversations { get; set; } = new List<ConversationModel>
+    {
+        new ConversationModel { Name = "Sophie B.", Message = "Hi! I need more information..", AvatarUrl = "../assets/img/kal-visuals-square.jpg" },
+        new ConversationModel { Name = "Anne Marie", Message = "Awesome work, can you..", AvatarUrl = "../assets/img/marie.jpg" },
+        new ConversationModel { Name = "Ivanna", Message = "About files I can..", AvatarUrl = "../assets/img/ivana-square.jpg" },
+        new ConversationModel { Name = "Peterson", Message = "Have a great afternoon..", AvatarUrl = "../assets/img/team-4.jpg" },
+        new ConversationModel { Name = "Nick Daniel", Message = "Hi! I need more information..", AvatarUrl = "../assets/img/team-3.jpg" }
+    };
+
+    // Models
+    public class SettingModel
+    {
+        public string Id { get; set; }
+        public string Label { get; set; }
+        public bool IsEnabled { get; set; }
+    }
+
+    public class ProfileInfoModel
+    {
+        public string FullName { get; set; }
+        public string Mobile { get; set; }
+        public string Email { get; set; }
+        public string Location { get; set; }
+        public string Introduction { get; set; }
+    }
+
+    public class ConversationModel
+    {
+        public string Name { get; set; }
+        public string Message { get; set; }
+        public string AvatarUrl { get; set; }
+    }
+}

@@ -1,0 +1,58 @@
+﻿@using ServiceMaintenance.Services
+@using ServiceMaintenance.Models
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@using Syncfusion.Blazor.Lists
+
+
+<div class="notification-dropdown @NotificationDropdownClass">
+    <SfListView DataSource="@manufacturers"
+                ShowHeader="true"
+                HeaderTitle="Notifications"
+                CssClass="e-list-template listview-template">
+        <ListViewFieldSettings TValue="Manufacturer" Id="ManufacturerID" Text="Name" Child="Child"></ListViewFieldSettings>
+        <ListViewTemplates TValue="Manufacturer">
+            <Template>
+                @{
+                    var partInfo = context as Manufacturer;
+                }
+                <div class="list-item @(partInfo.ManufacturerID != 0 ? "clearfix desc e-list-wrapper e-list-multi-line e-list-avatar" : "clearfix e-list-wrapper e-list-multi-line e-list-avatar")">
+                    @if (!string.IsNullOrEmpty(partInfo.Logo))
+                    {
+                        <div class="e-avatar">
+                            <img src="@UriHelper.ToAbsoluteUri($"{partInfo.Logo}")" alt="Manufacturer Logo" />
+                        </div>
+                    }
+                    <div class="text-content">
+                        <span class="e-list-item-header">@partInfo.Name</span>
+                        <span class="e-list-content e-text-overflow">@partInfo.Description</span>
+                        @if (!string.IsNullOrEmpty(partInfo.Description))
+                        {
+                            <div id="list-logo" onclick="event.stopPropagation();">
+                                <span class="bookmark" title="Bookmark this item"></span>
+                                <span class="comments" title="Add a comment"></span>
+                                <span class="share" title="Share this item"></span>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(partInfo.Description))
+                        {
+                            <div class="timeStamp">@partInfo.Description</div>
+                        }
+                    </div>
+                </div>
+            </Template>
+        </ListViewTemplates>
+    </SfListView>
+</div>
+
+@code {
+    [Parameter]
+    public string NotificationDropdownClass { get; set; } = "default-class";
+
+    public IManufacturerService ManufacturerService { get; set; }
+    public IEnumerable<Manufacturer> manufacturers { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        manufacturers = await ManufacturerService.GetData();
+    }
+}

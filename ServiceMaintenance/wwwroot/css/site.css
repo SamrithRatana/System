@@ -1,0 +1,841 @@
+@import url('open.iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
+html, body {
+    font-family: 'Hanuman', Helvetica, Arial, sans-serif;
+  
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+/* Optional: Adjust bottom padding for content */
+body {
+    padding-bottom: 30px; /* Adjust this value based on the height of your navbar */
+
+}
+.sidebar {
+    position: fixed;
+    top: 58px;
+    left: 0px; /* Start off-screen */
+    width: 250px; /* Initial width of the sidebar */
+    z-index: 1000; /* Ensure sidebar is above other content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease, width 0.3s ease, left 0.3s ease; /* Transition for animation */
+}
+
+    .sidebar.expand {
+        left: 0; /* Bring sidebar on-screen */
+    }
+
+.page {
+    margin-left: 0; /* Start with no margin */
+    transition: margin-left 0.3s ease; /* Transition for animation */
+    z-index: -1000;
+   
+}
+/* Modernize SfGrid */
+.repair-grid {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Light shadow */
+    background-color: #fff;
+    padding: 15px;
+}
+
+.sf-grid {
+    border-radius: 10px; /* Rounded corners for the grid itself */
+    overflow: hidden;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1); /* Light shadow for grid */
+}
+
+    .sf-grid .e-headercell, .sf-grid .e-rowcell {
+        padding: 12px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .sf-grid .e-headercell {
+        background-color: #f4f7fb; /* Light background for headers */
+        font-weight: bold;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .sf-grid .e-rowcell {
+        border-bottom: 1px solid #eee;
+    }
+
+    .sf-grid .e-row:hover {
+        background-color: #f0f8ff; /* Light highlight on hover */
+    }
+
+/* Status and Priority Badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.status-gif {
+    width: 45px; /* Adjust size as needed */
+    height: 45px; /* Adjust size as needed */
+    margin-left: 8px; /* Space between badge text and GIF */
+    vertical-align: middle; /* Align vertically with the text */
+    object-fit: cover;
+}
+
+/* Define colors for each status */
+.status-inspection {
+    background-color: #17a2b8; /* Light blue for Inspection */
+}
+
+.status-awaiting-confirm {
+    background-color: #ffc107; /* Yellow for Awaiting Customer Confirm */
+}
+
+.status-awaiting-sparepart {
+    background-color: #fd7e14; /* Orange for Awaiting Sparepart */
+}
+
+.status-repairing {
+    background-color: #007bff; /* Blue for Repairing */
+}
+
+.status-finished {
+    background-color: #28a745; /* Green for Finished */
+}
+
+.status-rejected {
+    background-color: #dc3545; /* Red for Customer Rejected */
+}
+
+.status-unrepairable {
+    background-color: #6c757d; /* Grey for Unrepairable */
+}
+
+/* Define colors for each priority level */
+.priority-low {
+    background-color: #28a745; /* Green for Low */
+}
+
+.priority-normal {
+    background-color: #ffc107; /* Yellow for Normal */
+}
+
+.priority-high {
+    background-color: #dc3545; /* Red for High */
+}
+
+/* Style for the priority badge */
+.priority-badge {
+    padding: 3px 8px; /* Adjust padding to make it smaller */
+    border-radius: 6px; /* Make the border radius smaller */
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px; /* Adjust font size to make it smaller */
+    text-align: center;
+    display: inline-block;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+    .dashboard-overview-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-card {
+        width: 100%;
+        max-width: 300px;
+        padding-left: 60px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Mobile View: Stack chart and grid vertically */
+@media (max-width: 768px) {
+    .sales-chart-grid-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) { /* Mobile view */
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+@media (min-width: 601px) { /* Tablet and up */
+    .form-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns or as needed */
+    }
+}
+
+
+
+.page.expand {
+    margin-left: 250px; /* Adjust page content when sidebar is expanded */
+    z-index: 1;
+}
+
+.nav-menu{
+    margin-top:15px;
+}
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+.grid-size {
+    max-height: 700px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.my-style {
+    min-width: 850px;
+}
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+
+.black-text {
+    color: black;
+   
+}
+.d-flex {
+    display: flex;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.btn-user {
+    border: none;
+    border-radius: 50%; /* Makes the button round */
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    padding: 0;
+    background-color: #f0f0f0; /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 35px;
+    margin-top: 10px;
+}
+
+.user-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the button */
+}
+
+
+.navbar-logo {
+    height: 40px; /* Adjust the size as needed */
+    width: 80px;
+    margin-right: 10px; /* Adjust spacing if needed */
+}
+
+/* Ensure the dropdown menu is hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    right: 0; /* Align with the right edge of the button */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Style dropdown items */
+.dropdown-item {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+
+/* Class to show the dropdown menu */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* General button styles */
+.btn-icon, .btn-profile {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+}
+
+    /* Hover effect for icon buttons */
+    .btn-icon:hover {
+        background-color: #f0f0f0; /* Light background on hover */
+        color: #007bff; /* Change icon color on hover */
+    }
+
+    /* Hover effect for profile button */
+    .btn-profile:hover {
+        background-color: #e0e0e0; /* Slightly darker background on hover */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover for a lifting effect */
+    }
+
+/* Dropdown menu styles */
+.dropdown-container {
+    position: relative; /* Required for the absolute positioning of the dropdown menu */
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure it's not clickable */
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    right: 0; /* Align with the right edge of the button */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for opacity and visibility */
+}
+
+    /* Show the dropdown menu when visible */
+    .dropdown-menu.show {
+        opacity: 1; /* Fade in */
+        visibility: visible; /* Make it clickable */
+    }
+
+/* Style dropdown items */
+.dropdown-item {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa; /* Highlight background on hover */
+    }
+.btn-icon{
+    margin-right:5px;
+
+}
+
+/*detailreport*/
+
+.emp-profile {
+    padding: 5%; /* Increase padding */
+    margin-top: 5%; /* Increase top margin */
+    margin-bottom: 5%; /* Increase bottom margin */
+    background: #fff;
+}
+
+.profile-img {
+    text-align: center;
+    width: 150px; /* Increase width of profile image container */
+    height: 150px; /* Increase height of profile image container */
+}
+
+    .profile-img img {
+        width: 100%; /* Ensure image covers container */
+        height: 100%; /* Ensure image covers container */
+        object-fit: cover; /* Maintain aspect ratio and cover container */
+    }
+
+    .profile-img .file {
+        position: relative;
+        overflow: hidden;
+        margin-top: -20%;
+        width: 70%;
+        border: none;
+        font-size: 15px;
+        background: #212529b8;
+    }
+
+        .profile-img .file input {
+            position: absolute;
+            opacity: 0;
+            right: 0;
+            top: 0;
+        }
+
+.profile-head h5 {
+    color: #333;
+}
+
+.profile-head h6 {
+    color: #0062cc;
+}
+
+.profile-edit-btn {
+    border: none;
+    border-radius: 1.5rem;
+    width: 80%; /* Increase button width */
+    padding: 3%; /* Increase padding */
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.proile-rating {
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+
+    .proile-rating span {
+        color: #495057;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+.profile-head .nav-tabs {
+    margin-bottom: 5%;
+}
+
+    .profile-head .nav-tabs .nav-link {
+        font-weight: 600;
+        border: none;
+    }
+
+        .profile-head .nav-tabs .nav-link.active {
+            border: none;
+            border-bottom: 2px solid #0062cc;
+        }
+
+.profile-work {
+    padding: 20%; /* Increase padding */
+    margin-top: -10%; /* Adjust margin top if needed */
+}
+
+    .profile-work p {
+        font-size: 12px;
+        color: #818182;
+        font-weight: 600;
+        margin-top: 10%;
+    }
+
+    .profile-work a {
+        text-decoration: none;
+        color: #495057;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .profile-work ul {
+        list-style: none;
+    }
+
+.profile-tab label {
+    font-weight: 600;
+}
+
+.profile-tab p {
+    font-weight: 600;
+    color: #0062cc;
+}
+
+/* Add border and shadow to the tab content */
+.profile-tab .tab-pane {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Adjust margins for the tab content */
+.profile-tab .row {
+    margin-bottom: 15px;
+}
+
+/* Optional: Adjust spacing within rows for a cleaner look */
+.profile-tab .col-md-6 {
+    padding-bottom: 10px;
+}
+
+
+
+
+.nav-title {
+    text-decoration: none; /* Removes the underline */
+    color: black; /* Sets text color to black */
+}
+
+    .nav-title:hover {
+        text-decoration: none; /* Ensures underline is removed on hover */
+        color: black; /* Maintains text color on hover */
+    }
+
+
+/* Bottom Navigation Bar Styles */
+.bottom-nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* White background for a clean look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it's above the settings drawer */
+    display: flex;
+    justify-content: space-around; /* Distribute navigation items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 8px 0; /* Adjust padding as needed */
+    border-top: 1px solid #e0e0e0; /* Light border for separation */
+}
+
+
+    .bottom-nav-bar .nav-link {
+        text-decoration: none;
+        color: #333; /* Dark text color */
+        font-size: 14px; /* Font size for readability */
+        text-align: center; /* Center align text */
+        flex: 1; /* Allow link to grow and take up space */
+        transition: color 0.3s, transform 0.3s; /* Smooth color and scale transitions */
+    }
+
+        .bottom-nav-bar .nav-link i {
+            display: block;
+            font-size: 20px; /* Adjust icon size */
+            margin-bottom: 4px; /* Space between icon and text */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .bottom-nav-bar .nav-link span {
+            display: block;
+            font-size: 12px; /* Smaller font size for text */
+        }
+
+        .bottom-nav-bar .nav-link:hover {
+            color: #007bff; /* Color change on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        .bottom-nav-bar .nav-link.active {
+            color: #007bff; /* Highlight color for the active link */
+        }
+
+
+.settings-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px; /* Medium width for the drawer */
+    background-color: #ffffff; /* White background */
+    border-left: 1px solid #ddd; /* Light border for separation */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transform: translateX(100%); /* Hide drawer off-screen by default */
+    transition: transform 0.3s ease; /* Smooth slide-in transition */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Adjust padding for better spacing */
+    z-index: 999; /* Ensure it's below the bottom navigation bar */
+}
+
+/* Profile Section Styles */
+.drawer-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f7f7f7; /* Light background for profile section */
+    padding: 20px; /* Increase padding for more space around profile */
+    margin-bottom: 20px; /* Space below profile section */
+}
+
+.profile-img {
+    width: 80px; /* Medium size for the profile image */
+    height: 80px; /* Medium size for the profile image */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+    .profile-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.profile-info {
+    text-align: center; /* Center-align text */
+}
+
+.profile-title {
+    font-size: 18px; /* Medium font size */
+    margin: 0;
+}
+
+.profile-subtitle {
+    font-size: 14px; /* Medium font size */
+    margin: 0;
+}
+
+/* Drawer Visibility Styles */
+.settings-drawer.show {
+    transform: translateX(0); /* Slide in drawer */
+}
+
+.settings-drawer.hide {
+    transform: translateX(100%); /* Slide out drawer */
+}
+/* Drawer Item Styles */
+.drawer-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    background: none;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px; /* Adjust font size */
+}
+    /* Icon Style */
+    .drawer-item i {
+        margin-right: 10px; /* Space between icon and text */
+        font-size: 20px; /* Icon size */
+        color: #333; /* Icon color */
+    }
+
+    .drawer-item:hover {
+        background-color: #f1f1f1; /* Slight background color change on hover */
+    }
+
+.profile-picture{
+    height:350px;
+    width:350px;
+    object-fit:cover;
+}
+
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+    .w3-card-title {
+        font-size: 1.2rem;
+    }
+
+    .w3-text-grey {
+        font-size: 0.9rem;
+    }
+
+    .w3-button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-icon {
+        display: none; /* Hide the button */
+    }
+
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for smaller screens */
+    }
+
+    .page.expand {
+        margin-left: 200px; /* Adjust page margin for smaller screens */
+    }
+
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+        .header .actions button {
+            margin: 10px 0;
+        }
+
+    .e-list-header {
+        font-size: 16px;
+    }
+
+    .list-item {
+        padding: 8px;
+    }
+
+    .e-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+        .e-avatar img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .actions {
+        font-size: 16px;
+    }
+
+    .manufacturer-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .manufacturer-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .manufacturer-details h4 {
+        font-size: 16px;
+    }
+
+    .manufacturer-details p {
+        font-size: 12px;
+    }
+}
+
+/* Styles for screens up to 576px */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 150px; /* Further adjust sidebar width for very small screens */
+    }
+
+    .page.expand {
+        margin-left: 150px; /* Adjust page margin for very small screens */
+    }
+
+    .my-style {
+        min-width: 5%;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
+    .validation-message {
+        height: inherit;
+        widows: revert-layer;
+    }
+
+    .card {
+        margin-bottom: 1rem; /* More space below cards on small screens */
+    }
+
+    .btn {
+        padding: 0.5rem 0.75rem; /* Adjust button padding for small screens */
+    }
+
+    .text-center {
+        margin-bottom: 1rem; /* Space below center-aligned text on small screens */
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn-primary {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .profile-head h5 {
+        font-size: 1.125rem;
+    }
+
+    .form-floating input {
+        font-size: 0.75rem;
+    }
+}
+
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
+    .emoji-list {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on smaller screens */
+    }
+}
+
+/* Styles for screens up to 450px */
+@media (max-width: 450px) {
+    .listview-template.e-listview #list-logo {
+        display: none;
+    }
+}
+
+/* Styles for screens up to 400px */
+@media (max-width: 400px) {
+    .emoji-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on very small screens */
+    }
+}
+
+/* Styles for screens up to 1024px */
+@media (max-width: 1024px) {
+    .hide-on-responsive {
+        display: none; /* Hide the button */
+    }
+}
+
+/* Styles for screens up to 767.98px */
+@media (max-width: 767.98px) {
+    .card-header h4 {
+        font-size: 1.25rem; /* Increase font size for better readability on mobile */
+    }
+
+    .card-body .form-check {
+        font-size: 0.875rem; /* Adjust font size for better readability on mobile */
+    }
+
+    .card-body .form-check-label {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-body .form-check-input {
+        margin-right: 0.5rem;
+    }
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Disable fixed background for mobile */
+    }
+
+    .article {
+        padding: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

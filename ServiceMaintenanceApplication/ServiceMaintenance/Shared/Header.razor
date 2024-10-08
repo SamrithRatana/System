@@ -1,0 +1,91 @@
+﻿<nav class="navbar header-navbar p-0">
+    <button class="navbar-toggler bg-primary d-block" @onclick="OnToggleClick">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="d-flex justify-content-between w-100">
+        <div class="d-flex justify-content-start">
+            <DxButton RenderStyle="ButtonRenderStyle.None" CssClass="black-text" @onclick="ClickHome" Text="Service Checklist Management" />
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-icon">
+                <i class="fas fa-file"></i>
+            </button>
+            <button class="btn btn-icon" @onclick="ToggleDarkMode">
+                <i class="@GetToggleIconClass()"></i>
+            </button>
+            <button class="btn btn-icon">
+                <i class="fa fa-bell"></i>
+            </button>
+            
+            <button class="btn btn-profile" @onclick="ToggleProfileMenu">
+                <img src="./images/Untitled-1.png" alt="Profile" class="profile-img" />
+            </button>
+            <div class="dropdown-menu @dropdownClass">
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-user dropdown-item-icon"></i> Profile
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-cog dropdown-item-icon"></i> Settings
+                </a>
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-sign-out-alt dropdown-item-icon"></i> Logout
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+@code {
+    [Inject] private NavigationManager Navigation { get; set; }
+    private bool IsDarkMode { get; set; }
+    private bool IsProfileMenuVisible { get; set; }
+    private string dropdownClass => IsProfileMenuVisible ? "show" : "";
+
+
+    [Parameter] public bool ToggleOn { get; set; }
+    [Parameter] public EventCallback<bool> ToggleOnChanged { get; set; }
+    @inject IJSRuntime JSRuntime
+
+    void ClickHome()
+    {
+        // Navigate to the home page
+        Navigation.NavigateTo("/");
+
+       
+    }
+    async Task ToggleDarkMode()
+    {
+        IsDarkMode = !IsDarkMode;
+        await ApplyDarkMode(); // Await the asynchronous method
+    }
+
+    private async Task ApplyDarkMode()
+    {
+        if (IsDarkMode)
+        {
+            await JSRuntime.InvokeVoidAsync("applyDarkMode");
+        }
+        else
+        {
+            await JSRuntime.InvokeVoidAsync("applyLightMode");
+        }
+    }
+
+    private string GetToggleIconClass()
+    {
+        return IsDarkMode ? "fas fa-sun" : "fas fa-moon";
+    }
+    async Task OnToggleClick() => await Toggle();
+
+    async Task Toggle(bool? value = null) {
+        var newValue = value ?? !ToggleOn;
+        if(ToggleOn != newValue) {
+            ToggleOn = newValue;
+            await ToggleOnChanged.InvokeAsync(ToggleOn);
+        }
+    }
+    void ToggleProfileMenu()
+    {
+        IsProfileMenuVisible = !IsProfileMenuVisible;
+    }
+}

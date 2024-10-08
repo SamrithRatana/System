@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance.Api\\wwwroot\\images\\UseCase.png",
+      "PackagePath": "staticwebassets\\images\\UseCase.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance.Api\\wwwroot\\images\\sar.jpg",
+      "PackagePath": "staticwebassets\\images\\sar.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ServiceMaintenance.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ServiceMaintenance.Api.props",
+      "PackagePath": "build\\ServiceMaintenance.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ServiceMaintenance.Api.props",
+      "PackagePath": "buildMultiTargeting\\ServiceMaintenance.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ServiceMaintenance.Api.props",
+      "PackagePath": "buildTransitive\\ServiceMaintenance.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

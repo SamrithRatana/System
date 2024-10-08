@@ -1,0 +1,175 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Identity
+@using ServiceMaintenance.Models
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject UserManager<ApplicationUser> UserManager
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@using Syncfusion.Blazor.Lists
+
+
+
+
+<div class="bottom-nav-bar">
+    <AuthorizeView>
+        <Authorized>
+            <a class="nav-link" href="/" @onclick="NavigateToHome">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+            <a class="nav-link" href="/about" @onclick="NavigateToAbout">
+                <i class="fas fa-info"></i>
+                About
+            </a>
+            <a class="nav-link" href="#" @onclick="ToggleNotificationDropdown">
+                <i class="fa fa-bell"></i>
+                Notification
+            </a>
+            <a class="nav-link" @onclick="ToggleSettingsDrawer">
+                <i class="fas fa-cog"></i>
+                Settings
+            </a>
+        </Authorized>
+        <NotAuthorized>
+            <a class="nav-link" href="/identity/account/login">
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </a>
+            <a class="nav-link" href="/identity/account/register">
+                <i class="fas fa-user-plus"></i>
+                Register
+            </a>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+<!-- Notification Dropdown -->
+<div class="notification-dropdown-mobile @notificationDropdownClass">
+    <SfListView DataSource="@manufacturers"
+                ShowHeader="true"
+                HeaderTitle="Notifications"
+                CssClass="e-list-template listview-template">
+        <ListViewFieldSettings TValue="Manufacturer" Id="ManufacturerID" Text="Name" Child="Child"></ListViewFieldSettings>
+        <ListViewTemplates TValue="Manufacturer">
+            <Template>
+                @{
+                    var partInfo = context as Manufacturer;
+
+                }
+                <div class="list-item @(partInfo.ManufacturerID != 0 ? "clearfix desc e-list-wrapper e-list-multi-line e-list-avatar" : "clearfix e-list-wrapper e-list-multi-line e-list-avatar")">
+                    @if (!string.IsNullOrEmpty(partInfo.Logo))
+                    {
+                        <div class="e-avatar">
+                            <img src="@UriHelper.ToAbsoluteUri($"{partInfo.Logo}")" alt="Manufacturer Logo" />
+                        </div>
+                    }
+                    <div class="text-content">
+                        <span class="e-list-item-header">@partInfo.Name</span>
+                        <span class="e-list-content e-text-overflow">@partInfo.Description</span>
+                        @if (!string.IsNullOrEmpty(partInfo.Description))
+                        {
+                            <div id="list-logo" onclick="event.stopPropagation();">
+                                <span class="bookmark" title="Bookmark this item"></span>
+                                <span class="comments" title="Add a comment"></span>
+                                <span class="share" title="Share this item"></span>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(partInfo.Description))
+                        {
+                            <div class="timeStamp">@partInfo.Description</div>
+                        }
+                    </div>
+                </div>
+            </Template>
+        </ListViewTemplates>
+    </SfListView>
+</div>
+
+<!-- Drawer Menu -->
+<AuthorizeView>
+    <Authorized>
+        <div class="settings-drawer @drawerClass">
+            <!-- Profile Section -->
+            <div class="drawer-profile">
+                <div class="profile-img">
+                    @if (user?.ProfilePicture != null)
+                    {
+                        <img src="data:image/*;base64,@(Convert.ToBase64String(user.ProfilePicture))" alt="Profile" />
+                    }
+                    else
+                    {
+                        <img src="./images/avatar.jpg" alt="Default Profile" />
+                    }
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-title">@user?.UserName</h2>
+                    <p class="profile-subtitle">Subtitle or additional info</p>
+                </div>
+            </div>
+            <!-- Drawer Items -->
+            <button class="drawer-item" @onclick="dr1">
+                <i class="fas fa-question-circle"></i>
+                Help & Support
+            </button>
+            <button class="drawer-item" @onclick="dr2">
+                <i class="fas fa-user-shield"></i>
+                Privacy
+            </button>
+            <button class="drawer-item" @onclick="dr3">
+                <i class="fas fa-file-contract"></i>
+                Terms & Conditions
+            </button>
+
+            <a class="drawer-item" href="/identity/account/logout" style="text-decoration:none">
+                <i class="fas fa-sign-out-alt"></i>
+                Log out
+            </a>
+            <button class="drawer-item" @onclick="CloseDrawer">
+                <i class="fas fa-times"></i>
+                Close
+            </button>
+        </div>
+    </Authorized>
+</AuthorizeView>
+
+<style>
+    .bottom-nav-bar {
+        /* Style for your bottom navigation bar */
+    }
+
+    .nav-item-profile {
+        display: flex;
+        align-items: center;
+    }
+
+        .nav-item-profile .rounded-circle {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+    .username {
+        font-weight: bold;
+    }
+
+    .notification-dropdown-mobile {
+        position: absolute;
+        bottom: 70px; /* Adjust this value based on your layout */
+        right: 20px; /* Adjust this value as needed */
+        width: 300px;
+        max-height: 400px;
+        overflow-y: auto;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: none; /* Hidden by default */
+        z-index: 1050; /* High value to ensure it's on top */
+    }
+
+        .notification-dropdown-mobile.show {
+            display: block;
+        }
+</style>

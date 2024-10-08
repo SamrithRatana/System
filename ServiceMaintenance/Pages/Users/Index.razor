@@ -1,0 +1,91 @@
+﻿@page "/users"
+@inject UserService UserService
+@inject NavigationManager NavigationManager
+@attribute [Authorize(Roles = "Admin")]
+
+<h1>User List</h1>
+<hr />
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <RadzenDataGrid @ref="grid" Data="@users" TItem="UserViewModel" Class="mt-4 table-shadow" ColumnWidth="200px" AllowSorting="true" AllowPaging="true" AllowFiltering="true" Responsive="true" PageSize="3">
+        <Columns>
+            <RadzenDataGridColumn TItem="UserViewModel" Property="FirstName" Title="FirstName" />
+            <RadzenDataGridColumn TItem="UserViewModel" Property="LastName" Title="LastName" />
+            <RadzenDataGridColumn TItem="UserViewModel" Property="UserName" Title="User" />
+            <RadzenDataGridColumn TItem="UserViewModel" Property="Email" Title="Email" />
+            <RadzenDataGridColumn TItem="UserViewModel" Property="Roles" Title="Roles">
+                <Template>
+                    @string.Join(", ", context.Roles)
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="UserViewModel" Title="Actions" Width="160px">
+                <Template Context="user">
+                    <button class="btn btn-primary btn-sm" @onclick="() => ManageRoles(user.Id)">Roles</button>
+                    <button class="btn btn-outline-primary btn-sm" @onclick="() => ManageProfile(user.Id)">Profile</button>
+                    <button class="btn btn-primary btn-sm" @onclick="() => AddUser()">Add</button>
+                    <button class="btn btn-warning btn-sm" @onclick="() => EditUser(user.Id)">Edit</button>
+                    <button class="btn btn-danger btn-sm" @onclick="() => DeleteUser(user.Id)">Delete</button>
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+}
+
+<style>
+    .table-shadow {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden; /* Ensure the shadow doesn't affect the rounded corners */
+    }
+
+    .btn-sm {
+        font-size: 0.75rem; /* Adjust the font size for smaller buttons */
+        padding: 0.25rem 0.5rem; /* Adjust padding for smaller buttons */
+        line-height: 1.5; /* Adjust line height */
+    }
+</style>
+
+@code {
+    private List<UserViewModel> users;
+    private bool isLoading;
+    private RadzenDataGrid<UserViewModel> grid;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        users = await UserService.GetUsersAsync();
+        isLoading = false;
+    }
+
+    private void AddUser()
+    {
+        NavigationManager.NavigateTo("/users/create");
+    }
+
+    private void ManageRoles(string userId)
+    {
+        NavigationManager.NavigateTo($"/users/{userId}/roles");
+    }
+
+    private void EditUser(string userId)
+    {
+        NavigationManager.NavigateTo($"/users/edit/{userId}");
+    }
+
+    private async Task DeleteUser(string userId)
+    {
+        await UserService.DeleteUserAsync(userId);
+        users = await UserService.GetUsersAsync(); // Refresh the user list
+        await grid.Reload(); // Reload the grid to reflect changes
+    }
+
+    private void ManageProfile(string userId)
+    {
+        NavigationManager.NavigateTo($"/users/{userId}/profile");
+    }
+}

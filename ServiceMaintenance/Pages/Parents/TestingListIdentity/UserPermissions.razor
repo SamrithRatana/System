@@ -1,0 +1,67 @@
+﻿@page "/userpermissions"
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject UserManager<IdentityUser> UserManager
+@inject RoleManager<IdentityRole> RoleManager
+
+<h3>User Permissions</h3>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!users.Any())
+{
+    <p>No users found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var user in users)
+        {
+            <li>
+                @user.UserName
+                <ul>
+                    @if (userRoles.ContainsKey(user.UserName))
+                    {
+                        @foreach (var role in userRoles[user.UserName])
+                        {
+                            <li>@role</li>
+                        }
+                    }
+                    else
+                    {
+                        <li>No roles found.</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private IList<IdentityUser> users;
+    private Dictionary<string, List<string>> userRoles = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            users = await UserManager.Users.ToListAsync();
+
+            foreach (var user in users)
+            {
+                if (user != null)
+                {
+                    var roles = await UserManager.GetRolesAsync(user);
+                    userRoles[user.UserName] = roles.ToList();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Log or handle the exception as needed
+            Console.Error.WriteLine($"An error occurred while fetching users or roles: {ex.Message}");
+        }
+    }
+}

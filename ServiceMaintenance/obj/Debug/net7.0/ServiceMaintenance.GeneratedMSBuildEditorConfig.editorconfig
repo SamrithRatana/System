@@ -1,0 +1,391 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ServiceMaintenance
+build_property.RootNamespace = ServiceMaintenance
+build_property.ProjectDir = C:\Users\Admins\Dev\ServiceMaintenanceApplication\ServiceMaintenance\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Admins\Dev\ServiceMaintenanceApplication\ServiceMaintenance
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Chat/ChatPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q2hhdFxDaGF0UGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Chat/VoiceChat.razor]
+build_metadata.AdditionalFiles.TargetPath = Q2hhdFxWb2ljZUNoYXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Details/ParallaxChatDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1xQYXJhbGxheENoYXREZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Details/PrinterModelDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1xQcmludGVyTW9kZWxEZXRhaWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Details/ServiceReportDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1xTZXJ2aWNlUmVwb3J0RGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Details/TypeParameter/Notification.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlsc1xUeXBlUGFyYW1ldGVyXE5vdGlmaWNhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/EditForm/ManufacturerAddEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEZvcm1cTWFudWZhY3R1cmVyQWRkRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/Banner/BannerChat.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xCYW5uZXJcQmFubmVyQ2hhdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/CustomerModule/CustomerList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xDdXN0b21lck1vZHVsZVxDdXN0b21lckxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ItemModule/DeletedItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xJdGVtTW9kdWxlXERlbGV0ZWRJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ItemModule/EditItem.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xJdGVtTW9kdWxlXEVkaXRJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ItemModule/ItemModelList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xJdGVtTW9kdWxlXEl0ZW1Nb2RlbExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ManufacturerModule/ManufacturerPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xNYW51ZmFjdHVyZXJNb2R1bGVcTWFudWZhY3R1cmVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/PrinterModelModule/PrinterModelList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xQcmludGVyTW9kZWxNb2R1bGVcUHJpbnRlck1vZGVsTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ProductModule/Addpro.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xQcm9kdWN0TW9kdWxlXEFkZHByby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/ProductModule/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xQcm9kdWN0TW9kdWxlXFByb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/RepairServiceModule/RepairServicesList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xSZXBhaXJTZXJ2aWNlTW9kdWxlXFJlcGFpclNlcnZpY2VzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/SparePartModule/SparePartList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xTcGFyZVBhcnRNb2R1bGVcU3BhcmVQYXJ0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TechnicalServiceReportModule/TechnicalServiceReport.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZWNobmljYWxTZXJ2aWNlUmVwb3J0TW9kdWxlXFRlY2huaWNhbFNlcnZpY2VSZXBvcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TestingListIdentity/Grid.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZXN0aW5nTGlzdElkZW50aXR5XEdyaWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TestingListIdentity/RoleList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZXN0aW5nTGlzdElkZW50aXR5XFJvbGVMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TestingListIdentity/TestingPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZXN0aW5nTGlzdElkZW50aXR5XFRlc3RpbmdQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TestingListIdentity/UserList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZXN0aW5nTGlzdElkZW50aXR5XFVzZXJMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Parents/TestingListIdentity/UserPermissions.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFyZW50c1xUZXN0aW5nTGlzdElkZW50aXR5XFVzZXJQZXJtaXNzaW9ucy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Profile/Test.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZVxUZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Reports/DeliveryReport.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwb3J0c1xEZWxpdmVyeVJlcG9ydC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Reports/TechnicalReport.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwb3J0c1xUZWNobmljYWxSZXBvcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Roles/AddRole.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZXNcQWRkUm9sZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Roles/EditRole.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZXNcRWRpdFJvbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Roles/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Roles/ManagePermissions.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZXNcTWFuYWdlUGVybWlzc2lvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Users/Component.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Users/CreateUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcQ3JlYXRlVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Users/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Users/UpdateUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcVXBkYXRlVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Shared/BrowserNotSupported.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJyb3dzZXJOb3RTdXBwb3J0ZWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Shared/IbottomNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXElib3R0b21OYXZNZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/ThemeSwitcher/ThemeSwitcher.razor]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVTd2l0Y2hlclxUaGVtZVN3aXRjaGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/ThemeSwitcher/ThemeSwitcherContainer.razor]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVTd2l0Y2hlclxUaGVtZVN3aXRjaGVyQ29udGFpbmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/ThemeSwitcher/ThemeSwitcherItem.razor]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVTd2l0Y2hlclxUaGVtZVN3aXRjaGVySXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-xceuki3p78
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c85cwqmp6l
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kt920xpgcq
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Lockout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/Users/ManageRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNcTWFuYWdlUm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admins/Dev/ServiceMaintenanceApplication/ServiceMaintenance/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

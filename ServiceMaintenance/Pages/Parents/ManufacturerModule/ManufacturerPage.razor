@@ -1,0 +1,223 @@
+﻿@page "/manufacturer"
+@using ServiceMaintenance.Models
+@using ServiceMaintenance.Services
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Grids
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager
+
+<DxToastProvider Name="Customization"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+<DxToastProvider Name="Error"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+
+<div class="card shadow-sm rounded-lg">
+    <div class="card-body">
+        <SfToolbar>
+            <ToolbarItems>
+                <ToolbarItem Text="New" PrefixIcon="e-add" Click="NewItem_Click" />
+                <ToolbarItem Text="Edit" PrefixIcon="e-edit" Click="EditItem_Click" />
+                <ToolbarItem Text="Delete" PrefixIcon="e-delete" Click="DeleteItem_Click" />
+                <ToolbarItem Text="Export" PrefixIcon="e-export">
+                    <ToolbarItem Text="To CSV" Click="ExportCsvItem_Click" />
+                    <ToolbarItem Text="To XLSX" Click="ExportXlsxItem_Click" />
+                    <ToolbarItem Text="To XLS" Click="ExportXlsItem_Click" />
+                </ToolbarItem>
+                <ToolbarItem Text="Print Report" PrefixIcon="e-print" Click="PrintReport_Click" />
+            </ToolbarItems>
+        </SfToolbar>
+    </div>
+</div>
+
+<SfGrid @ref="MyGrid"
+        DataSource="@manufacturers"
+        AllowPaging="true"
+        AllowSorting="true"
+        AllowExcelExport="true"
+        AllowPdfExport="true"
+        Toolbar="@toolbarItems"
+        OnRowSelected="RowSelectHandler"
+        OnActionBegin="ActionBeginHandler"
+        ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending", "Copy", "ExcelExport", "CsvExport", "PdfExport", "FirstPage", "PrevPage", "LastPage", "NextPage" })">
+    <GridEvents RowSelected="RowSelectHandler" OnToolbarClick="ToolbarClickHandler" TValue="Manufacturer"></GridEvents>
+
+    <GridColumns>
+
+        <GridColumn Field="Logo" HeaderText="Photo" Width="150">
+            <Template>
+                @{
+                    var item = context as Manufacturer;
+                }
+                <img src="@item.Logo" alt="Logo" width="100" />
+            </Template>
+        </GridColumn>
+        <GridColumn Field="ManufacturerID" HeaderText="ID" Width="50" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center" Visible="false"></GridColumn>
+        <GridColumn Field="Name" HeaderText="Name" Width="150"></GridColumn>
+        <GridColumn Field="Type" HeaderText="Type" Width="150"></GridColumn>
+       
+        <GridColumn Field="Description" HeaderText="Description" Width="200"></GridColumn>
+        <GridColumn HeaderText="Actions" Width="120">
+            <Template>
+                @{
+                    var item = context as Manufacturer;
+                }
+                <button class="btn btn-info" @onclick="() => ShowInfo(item)">Info</button>
+                <button class="btn btn-secondary" @onclick="() => PrintReport_Click()">Print</button>
+                <button class="btn btn-danger" @onclick="() => ConfirmDelete(item)">Delete</button>
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<SfDialog @ref="DialogDelete" IsModal="true" Width="250px" ShowCloseIcon="true" Visible="false">
+    <DialogTemplates>
+        <Header> Confirm Delete </Header>
+        <Content> Please confirm that you want to delete this record </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="Delete" IsPrimary="true" OnClick="ConfirmDeleteYes" />
+        <DialogButton Content="Cancel" IsPrimary="false" OnClick="ConfirmDeleteNo" />
+    </DialogButtons>
+</SfDialog>
+
+<SfDialog @ref="DialogNoRecordSelected" IsModal="true" Width="250px" ShowCloseIcon="true" Visible="false">
+    <DialogTemplates>
+        <Header> Warning! </Header>
+        <Content> You must select a record </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton Content="OK" IsPrimary="true" OnClick="CloseDialogNoRecordSelected" />
+    </DialogButtons>
+</SfDialog>
+
+@code {
+    private SfGrid<Manufacturer> MyGrid;
+    private SfDialog DialogDelete;
+    private SfDialog DialogNoRecordSelected;
+    private int? selectedManufacturerID;
+    private List<ItemModel> toolbarItems = new List<ItemModel>();
+    public IEnumerable<Manufacturer> manufacturers { get; set; }
+    ToastAnimationType Animation { get; set; } = ToastAnimationType.Slide;
+    [Inject]
+    public IManufacturerService ManufacturerService { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        manufacturers = await ManufacturerService.GetData();
+        toolbarItems.Add(new ItemModel() { Text = "Add", PrefixIcon = "e-add" });
+        toolbarItems.Add(new ItemModel() { Text = "Edit", PrefixIcon = "e-edit" });
+        toolbarItems.Add(new ItemModel() { Text = "Delete", PrefixIcon = "e-delete" });
+    }
+
+    private async Task CloseDialogNoRecordSelected()
+    {
+        await DialogNoRecordSelected.HideAsync();
+    }
+
+    private void RowSelectHandler(RowSelectEventArgs<Manufacturer> args)
+    {
+        selectedManufacturerID = args.Data.ManufacturerID;
+    }
+
+    public async void ConfirmDeleteNo()
+    {
+        await DialogDelete.HideAsync();
+    }
+
+    public async void ConfirmDeleteYes()
+    {
+        if (selectedManufacturerID.HasValue)
+        {
+            await ManufacturerService.DeleteData(selectedManufacturerID.Value);
+            await DialogDelete.HideAsync();
+            manufacturers = await ManufacturerService.GetData();
+            StateHasChanged();
+        }
+    }
+
+    private void ShowInfo(Manufacturer item)
+    {
+        // Implement the logic to show details about the manufacturer
+    }
+
+    private void PrintReport_Click()
+    {
+        // Implement the logic to print the report
+    }
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Text == "Add")
+        {
+            selectedManufacturerID = 0;
+            NavigationManager.NavigateTo($"/ManufacturerAddEdit/{selectedManufacturerID}");
+        }
+        if (args.Item.Text == "Edit")
+        {
+            if (selectedManufacturerID > 0)
+            {
+                {
+                    NavigationManager.NavigateTo($"/ManufacturerAddEdit/{selectedManufacturerID}");
+
+                }
+            }
+            else
+            {
+                //No record has been selected
+                DialogNoRecordSelected.ShowAsync();
+            }
+        }
+        if (args.Item.Text == "Delete")
+        {
+            if (selectedManufacturerID > 0)
+            {
+                DialogDelete.ShowAsync();
+            }
+            else
+            {
+                DialogNoRecordSelected.ShowAsync();
+            }
+        }
+    }
+    private void ConfirmDelete(Manufacturer item)
+    {
+        selectedManufacturerID = item.ManufacturerID;
+        DialogDelete.ShowAsync();
+    }
+
+    private void NewItem_Click(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        selectedManufacturerID = 0;
+        NavigationManager.NavigateTo($"/ManufacturerAddEdit/{selectedManufacturerID}");
+    }
+
+    private void EditItem_Click(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (selectedManufacturerID.HasValue)
+        {
+            NavigationManager.NavigateTo($"/ManufacturerAddEdit/{selectedManufacturerID}");
+        }
+        else
+        {
+            DialogNoRecordSelected.ShowAsync();
+        }
+    }
+
+    private void DeleteItem_Click(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (selectedManufacturerID.HasValue)
+        {
+            DialogDelete.ShowAsync();
+        }
+        else
+        {
+            DialogNoRecordSelected.ShowAsync();
+        }
+    }
+
+   
+}

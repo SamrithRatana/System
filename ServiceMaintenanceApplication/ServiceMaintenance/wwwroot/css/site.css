@@ -1,0 +1,265 @@
+@import url('open.iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
+html, body {
+    font-family: 'Hanuman', Helvetica, Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+   
+}
+.sidebar {
+    position: fixed;
+    top: 58px;
+    left: 0px; /* Start off-screen */
+    width: 250px; /* Initial width of the sidebar */
+    z-index: 1000; /* Ensure sidebar is above other content */
+    background-color: white !important; /* Forcefully set background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease, width 0.3s ease, left 0.3s ease; /* Transition for animation */
+}
+
+    .sidebar.expand {
+        left: 0; /* Bring sidebar on-screen */
+    }
+
+.page {
+    margin-left: 0; /* Start with no margin */
+    transition: margin-left 0.3s ease; /* Transition for animation */
+    z-index: -1000;
+   
+}
+
+.page.expand {
+    margin-left: 250px; /* Adjust page content when sidebar is expanded */
+    z-index: 1;
+}
+
+.nav-menu{
+    margin-top:15px;
+}
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+.grid-size {
+    max-height: 700px;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+.my-style {
+    min-width: 850px;
+}
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for smaller screens */
+    }
+
+    .page.expand {
+        margin-left: 200px; /* Adjust page margin for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 150px; /* Further adjust sidebar width for very small screens */
+    }
+
+    .page.expand {
+        margin-left: 150px; /* Adjust page margin for very small screens */
+    }
+
+    .my-style {
+        
+        min-width: 5%;
+       
+    }
+    .card-body{
+       width:50px;
+    }
+    .validation-message{
+        height:inherit;
+        widows:revert-layer;
+    }
+    
+}
+.black-text {
+    color: black;
+   
+}
+.d-flex {
+    display: flex;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.btn-profile {
+    border: none;
+    border-radius: 50%; /* Makes the button round */
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    padding: 0;
+    background-color: #f0f0f0; /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 35px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the button */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+    background-color: #333;
+}
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar.light-mode {
+    background-color: #f8f9fa;
+}
+
+/* Toggle switch styles */
+.btn-icon {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* Ensure the dropdown menu is hidden by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    right: 0; /* Align with the right edge of the button */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Style dropdown items */
+.dropdown-item {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+
+/* Class to show the dropdown menu */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* General button styles */
+.btn-icon, .btn-profile {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+}
+
+    /* Hover effect for icon buttons */
+    .btn-icon:hover {
+        background-color: #f0f0f0; /* Light background on hover */
+        color: #007bff; /* Change icon color on hover */
+    }
+
+    /* Hover effect for profile button */
+    .btn-profile:hover {
+        background-color: #e0e0e0; /* Slightly darker background on hover */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add shadow on hover for a lifting effect */
+    }
+
+/* Dropdown menu styles */
+.dropdown-container {
+    position: relative; /* Required for the absolute positioning of the dropdown menu */
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure it's not clickable */
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    right: 0; /* Align with the right edge of the button */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for opacity and visibility */
+}
+
+    /* Show the dropdown menu when visible */
+    .dropdown-menu.show {
+        opacity: 1; /* Fade in */
+        visibility: visible; /* Make it clickable */
+    }
+
+/* Style dropdown items */
+.dropdown-item {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+    .dropdown-item:hover {
+        background-color: #f8f9fa; /* Highlight background on hover */
+    }
+.btn-icon{
+    margin-right:5px;
+
+}

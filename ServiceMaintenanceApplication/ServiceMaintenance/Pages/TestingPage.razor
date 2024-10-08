@@ -1,0 +1,72 @@
+﻿@page "/testing"
+@using ServiceMaintenance.Models
+@using ServiceMaintenance.Services
+@inject IReportDataService reportDataService  // Inject the service
+
+<DxLayoutBreakpoint DeviceSize="DeviceSize.XSmall" @bind-IsActive="@isXSmallScreen" />
+<div class="h-100 grid-wrapper">
+    @if (isXSmallScreen)
+    {
+        <div class="fab-container">
+            <DxButton RenderStyle="ButtonRenderStyle.Primary"
+                      IconCssClass="grid-icon-column-chooser"
+                      CssClass="fab"
+                      aria-label="Column Chooser"
+                      Click="@ShowColumnChooser" />
+        </div>
+    }
+    else
+    {
+        <div class="align-self-start p-2">
+            <DxButton Text="Column Chooser"
+                      RenderStyle="ButtonRenderStyle.Secondary"
+                      IconCssClass="grid-icon-column-chooser"
+                      Click="@ShowColumnChooser" />
+        </div>
+    }
+    <DxGrid Data="reportDatas" @ref="MyGrid" CssClass="grid-size"  PopupEditFormCssClass="my-style" EditMode="GridEditMode.PopupEditForm" ShowPager="true" PageSize="15" PageSizeSelectorVisible="true" SelectionMode="GridSelectionMode.Single" AllowSelectRowByClick="true" HighlightRowOnHover="true" ShowSearchBox="true" FilterMenuButtonDisplayMode="GridFilterMenuButtonDisplayMode.Always" >
+        <Columns>
+            <DxGridDataColumn FieldName="@nameof(ServiceReportData.ReportID)" MinWidth="80" />
+            <DxGridDataColumn FieldName="@nameof(ServiceReportData.CompanyName)" MinWidth="100" Visible="@GetExtraColumnsVisible()" />
+            <DxGridDataColumn FieldName="@nameof(ServiceReportData.Attention)" MinWidth="100" />
+            <DxGridDataColumn FieldName="@nameof(ServiceReportData.Solution)" Width="15%" MinWidth="80" Visible="@GetExtraColumnsVisible()" />
+            <DxGridDataColumn FieldName="@nameof(ServiceReportData.ID)" Width="10%" MinWidth="80" />
+            <DxGridCommandColumn Width="160px">
+            </DxGridCommandColumn>
+
+        </Columns>
+    </DxGrid>
+</div>
+
+@code {
+    IGrid MyGrid { get; set; }
+    public IEnumerable<ServiceReportData> reportDatas { get; set; }
+    bool isXSmallScreen;
+
+    void ShowColumnChooser()
+    {
+        MyGrid.ShowColumnChooser(new DialogDisplayOptions($".flexGrid", HorizontalAlignment.Center, VerticalAlignment.Center));
+    }
+
+    bool GetExtraColumnsVisible() => !isXSmallScreen;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Initialize reportDataService if it's null
+            if (reportDataService == null)
+            {
+                throw new InvalidOperationException("reportDataService is not initialized.");
+            }
+
+            // Call GetReport() to fetch data
+            reportDatas = await reportDataService.GetReport();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading reports: {ex.Message}");
+            // Handle error appropriately
+        }
+    }
+}

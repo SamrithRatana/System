@@ -1,0 +1,737 @@
+﻿
+@* <ul>
+    @foreach (var user in users)
+    {
+        <li>
+            <img src="@GetProfilePictureBase64(user.ProfilePicture)" alt="@user.UserName" width="50" height="50" />
+            <span>@user.UserName</span>
+            <span class="status @(user.IsOnline ? "online" : "offline")"></span>
+        </li>
+    }
+</ul> *@
+
+<div class="app">
+  <div class="chat-container @(string.IsNullOrEmpty(selectedRecipientId) ? "" : "chat-active")">
+         <div class="wrapper">
+      
+
+        <div class="conversation-area">
+            @foreach (var user in users)
+            {
+                <div class="msg @(user.IsOnline ? "online" : "offline")" @onclick="() => SelectUser(user.Id)">
+                    <img class="msg-profile" src="@GetProfilePictureBase64(user.ProfilePicture)" alt="@user.UserName" />
+                    <div class="msg-detail">
+                        <div class="msg-username">@user.UserName</div>
+                        <div class="msg-content">
+                            <span class="msg-message">@GetLastMessageText(user.Id)</span>
+                            <span class="msg-date">@GetLastMessageDate(user.Id)</span>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+@*         <button class="btn btn-secondary mb-3" @onclick="LeaveChatRoom">Leave Chat Room</button>
+ *@      <div class="chat-area">
+            <!-- Chat Box (Conditional Rendering) -->
+            @if (!string.IsNullOrEmpty(selectedRecipientId))
+            {
+                    
+                <div class="col-md-12">
+                    <!-- Chat Box Container -->
+                    <div class="chat-box-container">
+                        <!-- Chat Top Bar -->
+                        <div class="chat-top-bar">
+                            <img src="@selectedUserProfilePicture" alt="User Avatar" class="user-avatar" />
+                            <div class="user-info">
+                                <div class="user-name" style="color:white">@selectedUserName</div>
+                                <div class="user-status">
+                                    <span class="status @(users.FirstOrDefault(u => u.UserName == selectedUserName)?.IsOnline == true ? "online" : "offline")"></span>
+                                    @(users.FirstOrDefault(u => u.UserName == selectedUserName)?.IsOnline == true ? "Online" : "Offline")
+                                </div>                                 
+                            </div>
+                                <!-- Back Button for mobile view -->
+                                <DxButton class="back-button" @onclick="ClearSelectedUser" IconCssClass="fas fa-arrow-left"></DxButton>
+                        </div>
+
+
+                        <!-- Chat Messages -->
+                        <div id="chatBox" class="chat-box">
+                            @foreach (var chatMessage in messages)
+                            {
+                                <div class="chat-message @(chatMessage.User == userName ? "sent" : "received")">
+                                    <strong>@chatMessage.User</strong>
+                                    <p>@((MarkupString)chatMessage.Message)</p>
+
+
+                                    <!-- Display the progress bar and file size -->
+                                    @if (chatMessage.UploadProgress > 0 && chatMessage.UploadProgress < 100)
+                                    {
+                                        <div class="progress-container">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: @chatMessage.UploadProgress%;"
+                                                     aria-valuenow="@chatMessage.UploadProgress" aria-valuemin="0" aria-valuemax="100">
+                                                    @chatMessage.UploadProgress%
+                                                </div>
+                                            </div>
+                                            <div class="progress-size">
+                                                @chatMessage.UploadStatus
+                                            </div>
+                                        </div>
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(chatMessage.FileUrl))
+                                    {
+                                        <div class="video-container">
+                                            @if (IsVideoFile(chatMessage.FileUrl))
+                                            {
+                                                <video controls>
+                                                    <source src="@chatMessage.FileUrl" type="video/mp4" />
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            }
+                                            else if (IsImageFile(chatMessage.FileUrl))
+                                            {
+                                                <a href="@chatMessage.FileUrl" target="_blank">
+                                                    <img src="@chatMessage.FileUrl" alt="Attachment" />
+                                                </a>
+                                            }
+                                            else if (IsAudioFile(chatMessage.FileUrl))
+                                            {
+                                                <audio controls>
+                                                    <source src="@chatMessage.FileUrl" type="audio/mpeg" />
+                                                    Your browser does not support the audio element.
+                                                </audio>
+                                            }
+                                            else
+                                            {
+                                                <a href="@chatMessage.FileUrl" target="_blank" download>Download File</a>
+                                            }
+                                        </div>
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(chatMessage.AudioUrl))
+                                    {
+                                        <div>
+                                            <audio id="audioPlayer" controls>
+                                                <source src="@chatMessage.AudioUrl" type="audio/webm" />
+                                            </audio>
+                                        </div>
+                                    }
+                                    <span class="timestamp">@chatMessage.When.ToString("hh:mm tt")</span>
+                                    <!-- Hamburger Button -->
+                                    <div class="message-options">
+                                        <button class="hamburger-button" @onclick="() => ToggleOptions(chatMessage)">
+                                            <i class="fas fa-ellipsis-v"></i> <!-- Font Awesome icon for hamburger menu -->
+                                        </button>
+
+                                        <!-- Dropdown List -->
+                                        @if (chatMessage.ShowOptions)
+                                        {
+                                            <ul class="options-list">
+                                                <li @onclick="() => ReplyToMessage(chatMessage)">Reply</li>
+                                                <li @onclick="() => DeleteMessage(chatMessage)">Delete</li>
+                                            </ul>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>  
+                            
+                    </div>
+                </div>
+                    <div class="chat-area-footer">
+                        <!-- File Input with SVG Paperclip Icon -->
+                        <div class="chat-input-container">
+                            <!-- File Input Icon with SVG -->
+                            <div class="file-input-container">
+                                <!-- Label triggers file input when clicked -->
+                                <label class="file-input-icon" for="fileInput">
+                                    <!-- Your SVG Paperclip Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip">
+                                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+                                    </svg>
+                                </label>
+                                <!-- File Input (hidden) -->
+                                <InputFile id="fileInput" OnChange="HandleFileUpload" class="file-input" style="display: none;" />
+                            </div>
+                        </div>
+
+                        @*  <input type="text" @bind="message" placeholder="Type something here..." @onkeydown="HandleKeyDown" id="messageInput" class="chat-text-input" /> *@
+                        <input @bind="message" placeholder="Type a message..." class="form-control chat-text-input" @onkeydown="HandleKeyDown" />
+
+                        <div id="emojiPicker" class="emoji-picker">
+                            <!-- Button that toggles the emoji picker, using your existing SVG icon -->
+                            <button @onclick="ToggleEmojiPicker" class="btn btn-light emoji-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+                                </svg>
+                            </button>
+
+                            <!-- Emoji List, shown/hidden based on `showEmojiPicker` -->
+                            <div class="emoji-list @(showEmojiPicker ? "show" : "hide")">
+                                @foreach (var emoji in EmojiService.Emojis)
+                                {
+                                    <span @onclick="() => InsertEmoji(emoji)" class="emoji">
+                                        @emoji
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                      @*   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up">
+                            <path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" />
+                        </svg> *@
+                        <button class="btn btn-primary send-btn" @onclick="SendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <!-- Recording Controls -->
+                        <div id="recordingControls" class="recording-controls">
+                            <button id="recordToggleBtn" class="btn btn-primary recording-btn" @onclick="ToggleRecording">
+                                @if (isRecording)
+                                {
+                                    <i class="fas fa-stop"></i>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-microphone"></i>
+                                }
+                            </button>
+                        </div>
+                    </div>
+            }
+              
+       </div>
+    </div>
+     @*    <div class="detail-area">
+            <div class="detail-area-header">
+                <div class="msg-profile group">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2zM12 22v-6.5" />
+                        <path d="M22 8.5l-10 7-10-7" />
+                        <path d="M2 15.5l10-7 10 7M12 2v6.5" />
+                    </svg>
+                </div>
+                <div class="detail-title">CodePen Group</div>
+                <div class="detail-subtitle">Created by Aysenur, 1 May 2020</div>
+                <div class="detail-buttons">
+                    <button class="detail-button">
+                        Call
+                    </button>
+                    <button class="detail-button">
+                        Video Chat
+                    </button>
+                </div>
+            </div>
+            <div class="detail-changes">
+                <input type="text" placeholder="Search in Conversation">
+                <div class="detail-change">
+                    Change Color
+                    <div class="colors">
+                        <div class="color blue selected" data-color="blue"></div>
+                        <div class="color purple" data-color="purple"></div>
+                        <div class="color green" data-color="green"></div>
+                        <div class="color orange" data-color="orange"></div>
+                    </div>
+                </div>
+                <div class="detail-change">
+                    Change Emoji
+
+                </div>
+            </div>
+            <div class="detail-photos">
+                <div class="detail-photo-title">
+                    Shared photos
+                </div>
+                <div class="detail-photo-grid">
+                    <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2168&q=80" />
+                    <img src="https://images.unsplash.com/photo-1516085216930-c93a002a8b01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+                    <img src="https://images.unsplash.com/photo-1458819714733-e5ab3d536722?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80" />
+                    <img src="https://images.unsplash.com/photo-1520013817300-1f4c1cb245ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2287&q=80" />
+                    <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2247&q=80" />
+                    <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" />
+                    <img src="https://images.unsplash.com/photo-1560393464-5c69a73c5770?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80" />
+                    <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2249&q=80" />
+                    <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2309&q=80" />
+                    <img src="https://images.unsplash.com/photo-1473170611423-22489201d919?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" />
+                    <img src="https://images.unsplash.com/photo-1579613832111-ac7dfcc7723f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2189&q=80" />
+                </div>
+                <div class="view-more">View More</div>
+            </div>
+            <a href="https://twitter.com/AysnrTrkk" class="follow-me" target="_blank">
+                <span class="follow-text">
+                    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                    Follow me on Twitter
+                </span>
+            </a>
+        </div> *@
+    </div>
+</div>
+
+
+
+
+@page "/chat"
+@using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Forms
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject UserService UserService
+@inject EmojiService EmojiService
+@implements IAsyncDisposable
+
+
+
+@code {
+    private HubConnection hubConnection;
+    private string userName = string.Empty;
+    private string message = string.Empty;
+    private List<ChatMessage> messages = new List<ChatMessage>();
+    private List<UserViewModel> users = new List<UserViewModel>();
+    private Dictionary<string, Message> lastMessages = new Dictionary<string, Message>();
+    private string currentUserId = string.Empty;
+    private string selectedRecipientId = string.Empty;
+    private string selectedUserName = string.Empty;
+    private string selectedUserProfilePicture = string.Empty;
+    private string uploadedFileUrl = string.Empty;
+    private string recordedAudioUrl = string.Empty;
+    private bool isRecording = false;
+    private bool showEmojiPicker = false;
+    private Dictionary<string, bool> userOnlineStatus = new Dictionary<string, bool>();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("toggleDarkMode");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        userName = user.Identity.IsAuthenticated ? user.Identity.Name : "Anonymous";
+        currentUserId = user.FindFirst(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(Navigation.ToAbsoluteUri("/chatHub"))
+            .Build();
+
+        hubConnection.On<string, string, string, string, string, int>("ReceiveMessage", async (user, message, timestamp, fileUrl, audioUrl, messageId) =>
+    {
+        var encodedUser = System.Net.WebUtility.HtmlEncode(user);
+        var encodedMessage = System.Net.WebUtility.HtmlEncode(message);
+        messages.Add(new ChatMessage { User = encodedUser, Message = encodedMessage, When = DateTime.Parse(timestamp), FileUrl = fileUrl, AudioUrl = audioUrl, Id = messageId });
+
+        await InvokeAsync(StateHasChanged);
+    });
+        // Listening for last message updates
+        hubConnection.On<string, string, string, string>("UpdateLastMessage", (userId, recipientId, messageText, timestamp) =>
+        {
+            // Update last message for both users (sender and recipient)
+            if (lastMessages.ContainsKey(userId))
+            {
+                lastMessages[userId].Text = messageText;
+                lastMessages[userId].When = DateTime.Parse(timestamp);
+            }
+
+            if (lastMessages.ContainsKey(recipientId))
+            {
+                lastMessages[recipientId].Text = messageText;
+                lastMessages[recipientId].When = DateTime.Parse(timestamp);
+            }
+
+            InvokeAsync(StateHasChanged);
+        });
+
+      
+        hubConnection.On<int>("MessageDeleted", messageId =>
+    {
+        var messageToRemove = messages.FirstOrDefault(m => m.Id == messageId);
+        if (messageToRemove != null)
+        {
+            messages.Remove(messageToRemove);
+            InvokeAsync(StateHasChanged);
+        }
+    });
+        hubConnection.On<string>("UserConnected", async userId =>
+     {
+     await UpdateUserOnlineStatus(userId, true);
+     });
+
+        hubConnection.On<string>("UserDisconnected", async userId =>
+        {
+            await UpdateUserOnlineStatus(userId, false);
+        });
+
+    
+        await hubConnection.StartAsync();
+
+
+        // Fetch initial users and online status
+        users = await UserService.GetAllUsersForChatAsync();
+        var onlineUserIds = await hubConnection.InvokeAsync<List<string>>("GetOnlineUsers");
+        foreach (var useronline in users)
+        {
+            useronline.IsOnline = onlineUserIds.Contains(useronline.Id);
+        }
+
+        // Get the last message for each user
+        foreach (var chatUser in users)
+        {
+            var lastMessage = await UserService.GetLastMessageAsync(currentUserId, chatUser.Id);
+            if (lastMessage != null)
+            {
+                lastMessages[chatUser.Id] = lastMessage;
+            }
+        }
+    }
+    private string GetLastMessageText(string userId)
+    {
+        if (lastMessages.TryGetValue(userId, out var message))
+        {
+            return message.Text;
+        }
+        return "No messages";
+    }
+
+    private string GetLastMessageDate(string userId)
+    {
+        if (lastMessages.TryGetValue(userId, out var message))
+        {
+            return message.When.ToString("MMM d, yyyy h:mm tt");
+        }
+        return "No messages";
+    }
+    private async Task UpdateUserOnlineStatus(string userId, bool isOnline)
+    {
+        var user = users.FirstOrDefault(u => u.Id == userId);
+        if (user != null)
+        {
+            user.IsOnline = isOnline;
+            await InvokeAsync(StateHasChanged); // Ensure that StateHasChanged is called on the correct thread
+        }
+    }
+    void ClearSelectedUser()
+    {
+        selectedRecipientId = null; // Reset the selected user ID
+    }
+
+    private async Task SendMessage()
+    {
+        if (hubConnection is not null && !string.IsNullOrEmpty(selectedRecipientId))
+        {
+            var timestamp = DateTime.Now.ToString("o");
+            var audioUrl = string.IsNullOrEmpty(recordedAudioUrl) ? string.Empty : await JSRuntime.InvokeAsync<string>("uploadAudio", recordedAudioUrl);
+            await hubConnection.InvokeAsync("SendMessage", userName, message, currentUserId, selectedRecipientId, timestamp, uploadedFileUrl, audioUrl);
+            message = string.Empty;
+            uploadedFileUrl = string.Empty;
+            recordedAudioUrl = string.Empty; // Clear audio URL after sending
+        }
+    }
+
+    private async Task ToggleRecording()
+    {
+        if (isRecording)
+        {
+            // Stop recording
+            recordedAudioUrl = await JSRuntime.InvokeAsync<string>("stopRecording");
+            await SendMessage(); // Call SendMessage to send the recorded audio
+        }
+        else
+        {
+            // Start recording
+            await JSRuntime.InvokeVoidAsync("startRecording");
+        }
+
+        isRecording = !isRecording; // Toggle recording state
+        StateHasChanged(); // Refresh the component to update button appearance
+    }
+    private async Task SelectUser(string recipientId)
+    {
+        selectedRecipientId = recipientId;
+        messages.Clear();
+        var chatHistory = await hubConnection.InvokeAsync<IEnumerable<Message>>("GetChatHistory", currentUserId, selectedRecipientId);
+        messages.AddRange(chatHistory.Select(m => new ChatMessage
+            {
+                Id = m.Id, // Ensure ID is set correctly
+                User = m.UserName,
+                UserId = m.UserID, // Set UserId
+                Message = m.Text,
+                When = m.When,
+                FileUrl = m.FileUrl,
+                AudioUrl = m.AudioURL
+            }));
+
+        // Get the selected user's details
+        var selectedUser = users.FirstOrDefault(u => u.Id == recipientId);
+        if (selectedUser != null)
+        {
+            selectedUserName = selectedUser.UserName;
+            selectedUserProfilePicture = GetProfilePictureBase64(selectedUser.ProfilePicture);
+        }
+
+        StateHasChanged(); // Trigger re-render
+        await JSRuntime.InvokeVoidAsync("scrollToBottom", "chatBox");
+    }
+
+    private void LeaveChatRoom()
+    {
+        selectedRecipientId = string.Empty;
+        messages.Clear();
+        StateHasChanged();
+    }
+
+    private string GetProfilePictureBase64(byte[] profilePicture)
+    {
+        if (profilePicture == null || profilePicture.Length == 0)
+        {
+            return null;
+        }
+
+        return $"data:image/png;base64,{Convert.ToBase64String(profilePicture)}";
+    }
+
+    [JSInvokable]
+    public async Task LoadChatForMessage(int messageId)
+    {
+        // Find the message and the chat recipient
+        var message = messages.FirstOrDefault(m => m.Id == messageId);
+        if (message != null)
+        {
+            selectedRecipientId = message.UserId; // Or however you identify the recipient
+            await SelectUser(selectedRecipientId);
+        }
+    }
+    private ChatMessage progressMessage; // Track the progress message
+
+    private async Task HandleFileUpload(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file != null)
+        {
+            var totalFileSize = FormatFileSize(file.Size);
+
+            // Create or reuse a progress message
+            if (progressMessage == null)
+            {
+                progressMessage = new ChatMessage
+                    {
+                        User = userName,
+                        Message = "Uploading file...",
+                        When = DateTime.Now,
+                        UploadProgress = 0, // Initial progress
+                        FileSize = totalFileSize, // Set file size
+                        UploadStatus = "0 / " + totalFileSize // Set initial upload status
+                    };
+
+                messages.Add(progressMessage);
+                StateHasChanged(); // Refresh the UI to show the progress message
+            }
+
+            var progress = new Progress<int>(percent =>
+            {
+                // Calculate the uploaded size
+                var uploadedSize = (long)(file.Size * percent / 100.0);
+                var formattedUploadedSize = FormatFileSize(uploadedSize);
+
+                progressMessage.UploadProgress = percent; // Update the progress of the message
+                progressMessage.UploadStatus = $"{formattedUploadedSize} / {progressMessage.FileSize}"; // Update upload status
+                StateHasChanged(); // Refresh the UI to update progress
+            });
+
+            uploadedFileUrl = await UploadFileAsync(file, progress);
+
+            // Update the progress message to indicate successful upload
+            progressMessage.Message = "File uploaded successfully.";
+            progressMessage.FileUrl = uploadedFileUrl;
+            progressMessage.UploadProgress = 100; // Set progress to 100%
+            progressMessage.UploadStatus = $"{progressMessage.FileSize} / {progressMessage.FileSize}"; // Final status
+
+            // Send the message after the upload is complete
+            await SendMessage(); // Send the message including the uploaded file URL
+
+            // Remove the progress message after sending
+            messages.Remove(progressMessage);
+            progressMessage = null; // Clear the reference to the progress message
+            StateHasChanged(); // Refresh the UI to remove the message
+        }
+    }
+
+    private string FormatFileSize(long size)
+    {
+        if (size >= 1_000_000_000) return $"{size / 1_000_000_000.0:F1} GB";
+        if (size >= 1_000_000) return $"{size / 1_000_000.0:F1} MB";
+        if (size >= 1_000) return $"{size / 1_000.0:F1} KB";
+        return $"{size} bytes";
+    }
+
+
+
+    private async Task<string> UploadFileAsync(IBrowserFile file, IProgress<int> progress)
+    {
+        var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+        if (!Directory.Exists(uploadsFolder))
+        {
+            Directory.CreateDirectory(uploadsFolder);
+        }
+
+        var filePath = Path.Combine(uploadsFolder, file.Name);
+        long totalBytes = file.Size;
+        long totalBytesRead = 0L;
+        byte[] buffer = new byte[81920]; // 80KB buffer size
+
+        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        {
+            using (var stream = file.OpenReadStream(2L * 1024 * 1024 * 1024)) // Up to 2GB
+            {
+                int bytesRead;
+                while ((bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                {
+                    await fileStream.WriteAsync(buffer, 0, bytesRead);
+                    totalBytesRead += bytesRead;
+
+                    // Report progress
+                    int progressPercentage = (int)((totalBytesRead * 100) / totalBytes);
+                    progress.Report(progressPercentage);
+                }
+            }
+        }
+
+        return $"/uploads/{file.Name}";
+    }
+
+
+    private bool IsImageFile(string fileUrl)
+    {
+        var fileExtension = Path.GetExtension(fileUrl).ToLowerInvariant();
+        return SupportedImageFormats.Formats.Contains(fileExtension);
+    }
+    private bool IsVideoFile(string fileUrl)
+    {
+        var fileExtension = Path.GetExtension(fileUrl).ToLowerInvariant();
+        return SupportedVideoFormats.Formats.Contains(fileExtension);
+    }
+    private bool IsAudioFile(string fileUrl)
+{
+    var fileExtension = Path.GetExtension(fileUrl).ToLowerInvariant();
+    return SupportedAudioFormats.Formats.Contains(fileExtension);
+}
+
+
+    private async Task StartRecording()
+    {
+        await JSRuntime.InvokeVoidAsync("startRecording");
+    }
+
+       private async Task StopRecording()
+    {
+        recordedAudioUrl = await JSRuntime.InvokeAsync<string>("stopRecording");
+            await SendMessage(); // Call SendMessage to send the recorded audio
+        StateHasChanged(); // Refresh the component to reflect the updated audio URL
+    }
+    private async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            // Call JavaScript function with a valid ID string
+            await JSRuntime.InvokeVoidAsync("preventEnterDefault", "messageInput");
+
+            // Send the message
+            await SendMessage();
+
+            // Clear the message box
+            message = string.Empty;
+        }
+    }
+
+
+
+
+
+
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+    private void ToggleOptions(ChatMessage message)
+    {
+        // Toggle the visibility of the options for the clicked message
+        message.ShowOptions = !message.ShowOptions;
+
+        // Hide options for other messages
+        foreach (var msg in messages.Where(m => m != message))
+        {
+            msg.ShowOptions = false;
+        }
+
+        StateHasChanged();
+    }
+
+    private void ReplyToMessage(ChatMessage message)
+    {
+        // Logic to reply to the message
+        Console.WriteLine($"Replying to message: {message.Message}");
+        message.ShowOptions = false; // Hide options after selecting
+        StateHasChanged();
+    }
+
+    private async Task DeleteMessage(ChatMessage chatMessage)
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.InvokeAsync("DeleteMessage", chatMessage.Id); // Call to server-side to delete the message
+
+            // Optionally hide the dropdown after deletion
+            chatMessage.ShowOptions = false;
+        }
+    }
+
+
+      
+
+    private void ToggleEmojiPicker()
+    {
+        showEmojiPicker = !showEmojiPicker;
+        StateHasChanged(); // Refresh the component to show/hide the picker
+    }
+
+    private void InsertEmoji(string emoji)
+    {
+        message += emoji; // Append the selected emoji to the message input
+        StateHasChanged(); // Refresh the component to update the input field
+    }
+
+    public class ChatMessage
+    {
+        public int Id { get; set; } // Add this property
+        public string User { get; set; }
+        public string UserId { get; set; } // Add UserId to track the sender
+        public string Message { get; set; }
+        public DateTime When { get; set; }
+        public string FileUrl { get; set; }
+        public string AudioUrl { get; set; } // Add this property
+        public int UploadProgress { get; set; } // New property for upload progress
+        public string FileSize { get; set; } // New property for file size
+        public string UploadStatus { get; set; } // New property for upload status
+        public bool ShowOptions { get; set; } // Track the visibility of the options
+    }
+}
+
+
+
+
+
+

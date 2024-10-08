@@ -1,0 +1,1837 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ServiceMaintenance.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ServiceMaintenance.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\css\\nucleo-icons.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nucleo-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\css\\nucleo-svg.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nucleo-svg.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\css\\soft-ui-dashboard.css",
+      "PackagePath": "staticwebassets\\assets\\css\\soft-ui-dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\css\\soft-ui-dashboard.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\soft-ui-dashboard.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\css\\soft-ui-dashboard.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\soft-ui-dashboard.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo-icons.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo-icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo-icons.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo-icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo-icons.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo-icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo-icons.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\fonts\\nucleo.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\nucleo.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\apple-icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\apple-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\bg1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\bruce-mars.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\bruce-mars.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved-10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved-11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved0.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved11-small.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved11-small.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved14.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved19.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved21.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved5-small.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved5-small.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved6-small.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved6-small.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\curved9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\curved9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\curved-images\\white-curved.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\curved-images\\white-curved.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\down-arrow-dark.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\down-arrow-dark.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\down-arrow-white.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\down-arrow-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\down-arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\home-decor-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-decor-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\home-decor-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-decor-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\home-decor-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-decor-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\illustrations\\rocket-dark.png",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\rocket-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\illustrations\\rocket-white.png",
+      "PackagePath": "staticwebassets\\assets\\img\\illustrations\\rocket-white.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\ivana-square.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ivana-square.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\ivancik.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ivancik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\kal-visuals-square.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\kal-visuals-square.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\logo-ct-dark.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-ct-dark.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\logo-ct.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-ct.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\logos\\mastercard.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logos\\mastercard.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\logos\\visa.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logos\\visa.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\marie.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\marie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\pattern-lines.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\pattern-lines.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\shape-1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\shape-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\shape-2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\shape-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\shape-3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\shape-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\wave-down.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\wave-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\wave-up.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\wave-up.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\waves-gray.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\waves-gray.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\shapes\\waves-white.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shapes\\waves-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\icon-sun-cloud.png",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\icon-sun-cloud.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-atlassian.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-atlassian.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-invision.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-invision.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-jira.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-jira.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-slack.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-slack.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-spotify.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-spotify.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-webdev.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-webdev.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\small-logos\\logo-xd.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\small-logos\\logo-xd.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\angular.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\angular.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\bootstrap.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\bootstrap.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\dribbble.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\dribbble.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\dropbox.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\dropbox.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\mastercard.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\mastercard.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\paypal.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\paypal.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\react.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\react.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\sketch.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\sketch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\slack.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\slack.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\spotify.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\spotify.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\tim.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\tim.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\unass.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\unass.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\visa.png",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\visa.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\theme\\vue.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\theme\\vue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\img\\vr-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\vr-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\core\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\core\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\core\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\plugins\\Chart.extension.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\Chart.extension.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\plugins\\bootstrap-notify.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\bootstrap-notify.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\plugins\\chartjs.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\chartjs.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\plugins\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\plugins\\smooth-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\smooth-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\soft-ui-dashboard.js",
+      "PackagePath": "staticwebassets\\assets\\js\\soft-ui-dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\soft-ui-dashboard.js.map",
+      "PackagePath": "staticwebassets\\assets\\js\\soft-ui-dashboard.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\js\\soft-ui-dashboard.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\soft-ui-dashboard.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_avatars.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_avatars.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_breadcrumbs.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_breadcrumbs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_cards.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_cards.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_dark-version.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_dark-version.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_dropup.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_dropup.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_fixed-plugin.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_fixed-plugin.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_gradients.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_info-areas.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_info-areas.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_misc.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_nav.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_popovers.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_popovers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_progress.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_rtl.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_rtl.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_social-buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_tables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_tilt.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_tilt.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_timeline.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_timeline.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_tooltips.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_tooltips.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_utilities-extend.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_utilities-extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_accordion.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_containers.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_helpers.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_maps.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_maps.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_placeholders.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\cards\\card-background.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\cards\\card-background.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\custom\\_styles.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\custom\\_styles.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\custom\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\custom\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_form-switch.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_form-switch.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_forms.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_inputs.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_inputs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\_colored-shadows.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\_colored-shadows.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\_social-buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\mixins\\mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\mixins\\mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_flatpickr.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_flatpickr.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_nouislider.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_nouislider.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_perfect-scrollbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_perfect-scrollbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_prism.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_prism.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\plugins.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\plugins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\theme.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\theme.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_animations.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_animations.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_avatars.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_avatars.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_badge.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_cards-extend.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_cards-extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_cards.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_cards.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_choices.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_choices.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_dark-version.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_dark-version.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_dropdowns.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_dropdowns.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_fixed-plugin.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_fixed-plugin.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_form-switch.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_form-switch.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_full-calendar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_full-calendar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_info-areas.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_info-areas.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_misc-extend.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_misc-extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_misc.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar-vertical.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar-vertical.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_pagination.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_rtl.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_rtl.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_social-buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_table.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_table.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_timeline.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_timeline.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities-extend.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities-extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\chat.css",
+      "PackagePath": "staticwebassets\\css\\chat.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\fonts\\syncfusion\\icons.eot",
+      "PackagePath": "staticwebassets\\css\\fonts\\syncfusion\\icons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\fonts\\syncfusion\\icons.svg",
+      "PackagePath": "staticwebassets\\css\\fonts\\syncfusion\\icons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\fonts\\syncfusion\\icons.ttf",
+      "PackagePath": "staticwebassets\\css\\fonts\\syncfusion\\icons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\fonts\\syncfusion\\icons.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\syncfusion\\icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\FONT-LICENSE.txt",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\FONT-LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\ICON-LICENSE.txt",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\ICON-LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\open.iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open.iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\syncfusion-blazor-icons.css",
+      "PackagePath": "staticwebassets\\css\\syncfusion-blazor-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\CAM.jpg",
+      "PackagePath": "staticwebassets\\images\\CAM.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\Cam-Logo-2.jpg",
+      "PackagePath": "staticwebassets\\images\\Cam-Logo-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\CamLogo.png",
+      "PackagePath": "staticwebassets\\images\\CamLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\awaiting-confirm.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\awaiting-confirm.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\awaiting-sparepart.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\awaiting-sparepart.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\finished.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\finished.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\inspection.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\inspection.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\rejected.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\rejected.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\repairing.gif",
+      "PackagePath": "staticwebassets\\images\\GIF\\repairing.gif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\GIF\\unrepairable.png",
+      "PackagePath": "staticwebassets\\images\\GIF\\unrepairable.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\Photo.jpg",
+      "PackagePath": "staticwebassets\\images\\Photo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\avatar.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\banner.png",
+      "PackagePath": "staticwebassets\\images\\banner.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\cam-chat.png",
+      "PackagePath": "staticwebassets\\images\\cam-chat.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\chat-Detail.jpg",
+      "PackagePath": "staticwebassets\\images\\chat-Detail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\default-image.jpg",
+      "PackagePath": "staticwebassets\\images\\default-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\default.jpg",
+      "PackagePath": "staticwebassets\\images\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\john.png",
+      "PackagePath": "staticwebassets\\images\\john.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\logo-3.png",
+      "PackagePath": "staticwebassets\\images\\logo-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\1a2b55d0-aa8d-466f-b22d-ca7cc1a436b0_DotMatrix Printer.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\1a2b55d0-aa8d-466f-b22d-ca7cc1a436b0_DotMatrix Printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\1ffd251b-29ce-489b-940f-9559ab2b7a49_MFP.avif",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\1ffd251b-29ce-489b-940f-9559ab2b7a49_MFP.avif"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\3efa187c-fda1-4e1a-bcaa-13c66fcfaada_DotMatrix Printer.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\3efa187c-fda1-4e1a-bcaa-13c66fcfaada_DotMatrix Printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\4da2e015-4ef2-4c9e-8b81-05dc3af78226_inkjet.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\4da2e015-4ef2-4c9e-8b81-05dc3af78226_inkjet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\7b95d2ea-9ab6-4471-ac99-4b447a1d7466_Laser-Printer.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\7b95d2ea-9ab6-4471-ac99-4b447a1d7466_Laser-Printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\9c846abb-0e5e-4c48-9ea2-2eb68ba34739_DotMatrix Printer.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\9c846abb-0e5e-4c48-9ea2-2eb68ba34739_DotMatrix Printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\a40803b6-4de9-4ebd-9116-2102eed29936_Multifunction Printers (MFPs).jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\a40803b6-4de9-4ebd-9116-2102eed29936_Multifunction Printers (MFPs).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\a92183c2-96e0-42c3-8f30-eca13d9aec36_Thermal Printers.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\a92183c2-96e0-42c3-8f30-eca13d9aec36_Thermal Printers.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\bcdedeb1-2b21-4da1-8fb9-4d388254a167_3D-Printer.webp",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\bcdedeb1-2b21-4da1-8fb9-4d388254a167_3D-Printer.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\default-image.jpg",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\default-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\manufacturers\\e9e75fba-25d6-49ef-856b-b5a0f442e78e_MFP.webp",
+      "PackagePath": "staticwebassets\\images\\manufacturers\\e9e75fba-25d6-49ef-856b-b5a0f442e78e_MFP.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\mary.png",
+      "PackagePath": "staticwebassets\\images\\mary.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\nophoto.jpg",
+      "PackagePath": "staticwebassets\\images\\nophoto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\notification-icon.png",
+      "PackagePath": "staticwebassets\\images\\notification-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\035cb713-b355-4b9b-8889-b42feccdb980_HP LaserJet Pro 400 Printer M401n.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\035cb713-b355-4b9b-8889-b42feccdb980_HP LaserJet Pro 400 Printer M401n.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\0413c85b-3b01-4285-8435-0ab73862e676_\u00A0HP LaserJet Pro MFP M227fdw.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\0413c85b-3b01-4285-8435-0ab73862e676_\u00A0HP LaserJet Pro MFP M227fdw.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\055f2e62-62e9-4842-b75c-130098822e27_HP Color LaserJet Pro M452dn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\055f2e62-62e9-4842-b75c-130098822e27_HP Color LaserJet Pro M452dn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\11afcd49-3b9a-4cd7-9e69-a33aa740368e_HP Color LaserJet Pro M479fdw Printer.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\11afcd49-3b9a-4cd7-9e69-a33aa740368e_HP Color LaserJet Pro M479fdw Printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\15ee6257-3759-4814-900e-defc44fac8a8_HP LaserJet Pro 400 Printer M401dne.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\15ee6257-3759-4814-900e-defc44fac8a8_HP LaserJet Pro 400 Printer M401dne.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\198c2480-0dca-47c9-b0fe-ac71df468d00_Tally T5040.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\198c2480-0dca-47c9-b0fe-ac71df468d00_Tally T5040.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\1a05894c-248b-427a-838a-1e7d1a971bf4_Canon CanoScan LiDE 300.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\1a05894c-248b-427a-838a-1e7d1a971bf4_Canon CanoScan LiDE 300.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\1a35640b-355b-41f2-adc4-8871852801ea_EPSON L805.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\1a35640b-355b-41f2-adc4-8871852801ea_EPSON L805.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\1b23e117-27dd-4b46-8860-364ec77b7bb8_HP LaserJet Pro MFP M225dn.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\1b23e117-27dd-4b46-8860-364ec77b7bb8_HP LaserJet Pro MFP M225dn.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\1c5f820b-ac25-4571-8c7b-1c0549bd6f22_HP LaserJet Pro MFP M26a.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\1c5f820b-ac25-4571-8c7b-1c0549bd6f22_HP LaserJet Pro MFP M26a.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\24386579-ff44-4c80-be47-3713d89c9e08_imageclass-mf246dn-b1.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\24386579-ff44-4c80-be47-3713d89c9e08_imageclass-mf246dn-b1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\244105d9-a10a-488d-b301-e0d268c08ca7_EPSON L1800.jpg",
+      "PackagePath": "staticwebassets\\images\\printermodels\\244105d9-a10a-488d-b301-e0d268c08ca7_EPSON L1800.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\353e1ad4-629e-473e-888d-8cd5030096e8_EPSON L3150.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\353e1ad4-629e-473e-888d-8cd5030096e8_EPSON L3150.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\37d8afd1-adc4-4158-80b4-536fa4eb4a67_Untitled-2.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\37d8afd1-adc4-4158-80b4-536fa4eb4a67_Untitled-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\3dc11119-6fac-44b1-bd69-0b02720ace87_HP LaserJet Pro 400 Printer M401n.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\3dc11119-6fac-44b1-bd69-0b02720ace87_HP LaserJet Pro 400 Printer M401n.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\43dfbd41-0156-49a4-832a-2ad020cce209_HP-LaserJet-Pro-M404dw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\43dfbd41-0156-49a4-832a-2ad020cce209_HP-LaserJet-Pro-M404dw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\48513178-c6c3-45a6-858e-8e08f9990223_HP LaserJet Pro P1102 Printer.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\48513178-c6c3-45a6-858e-8e08f9990223_HP LaserJet Pro P1102 Printer.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\4bc034ae-fb46-48fb-95c8-cdf954952b7c_Canon ImageClass LBP6300dn.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\4bc034ae-fb46-48fb-95c8-cdf954952b7c_Canon ImageClass LBP6300dn.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\4d5d0f6a-ab2f-40c4-88b7-1f3a283c620a_HP LaserJet Pro 400 Printer M401d.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\4d5d0f6a-ab2f-40c4-88b7-1f3a283c620a_HP LaserJet Pro 400 Printer M401d.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\66dcb369-9c8e-465f-a69f-d59144101b5b_HP LaserJet Pro 400 Printer M401dn.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\66dcb369-9c8e-465f-a69f-d59144101b5b_HP LaserJet Pro 400 Printer M401dn.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\67146561-ffb5-4f94-bbd3-e4ffcb06e63e_M135.jpg",
+      "PackagePath": "staticwebassets\\images\\printermodels\\67146561-ffb5-4f94-bbd3-e4ffcb06e63e_M135.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\67821d2d-a957-4b4a-9120-5dc564ad645e_\u00A0HP LaserJet Pro M1536dnf.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\67821d2d-a957-4b4a-9120-5dc564ad645e_\u00A0HP LaserJet Pro M1536dnf.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\6e0bf31c-a65b-43f6-8a65-1ba6545321e8_HP LaserJet Pro MFP M428fdw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\6e0bf31c-a65b-43f6-8a65-1ba6545321e8_HP LaserJet Pro MFP M428fdw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\7079f973-4680-49d9-8dd7-bc78280a5de8_HP LaserJet Pro MFP M227sdn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\7079f973-4680-49d9-8dd7-bc78280a5de8_HP LaserJet Pro MFP M227sdn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\73669333-64ac-494d-b35d-5b5a847e0449_Untitled-1.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\73669333-64ac-494d-b35d-5b5a847e0449_Untitled-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\756b5335-e47c-4fb0-8c52-1c0895d4c801_HP LaserJet Pro MFP M26a.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\756b5335-e47c-4fb0-8c52-1c0895d4c801_HP LaserJet Pro MFP M26a.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\790c8f02-73c9-4881-8e95-3df7b255c5c7_CANON imageCLASS MF244dw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\790c8f02-73c9-4881-8e95-3df7b255c5c7_CANON imageCLASS MF244dw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\819ca20b-f1ac-4a1c-b47d-00202a6f31b5_HP LaserJet Pro MFP M130fw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\819ca20b-f1ac-4a1c-b47d-00202a6f31b5_HP LaserJet Pro MFP M130fw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\84456ba8-4ba1-4cde-ae69-a71437ebd7c0_HP Color LaserJet Pro 400 MFP M425dn.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\84456ba8-4ba1-4cde-ae69-a71437ebd7c0_HP Color LaserJet Pro 400 MFP M425dn.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\85936ea7-030c-4482-8eb3-467c6529d022_Untitled-1.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\85936ea7-030c-4482-8eb3-467c6529d022_Untitled-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\8d1c9ef0-ce2b-4759-a63f-e0f4685b08cb_Canon imageCLASS MF264dw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\8d1c9ef0-ce2b-4759-a63f-e0f4685b08cb_Canon imageCLASS MF264dw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\8e173e74-e479-4397-994d-e874c1afc7b1_EPSON L3210.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\8e173e74-e479-4397-994d-e874c1afc7b1_EPSON L3210.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\9f9a2d5d-ceff-4725-906a-3c16ac406439_M454dn Colour 600 x 600 DPI A4.jpg",
+      "PackagePath": "staticwebassets\\images\\printermodels\\9f9a2d5d-ceff-4725-906a-3c16ac406439_M454dn Colour 600 x 600 DPI A4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\a15d276a-1d08-4972-a4a5-919d59fc2cab_HP Color LaserJet Pro MFP M477fdw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\a15d276a-1d08-4972-a4a5-919d59fc2cab_HP Color LaserJet Pro MFP M477fdw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\a55ba282-a01d-4f20-8e85-01b6f6e2b9b4_HP LaserJet Pro M203dn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\a55ba282-a01d-4f20-8e85-01b6f6e2b9b4_HP LaserJet Pro M203dn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\a58c9503-9ab4-4318-ae0c-20f9ef26afb3_Untitled-2.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\a58c9503-9ab4-4318-ae0c-20f9ef26afb3_Untitled-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\a5e63db6-be8d-4225-9f8b-0d563fd3bba8_HP LaserJet Pro MFP M428fdn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\a5e63db6-be8d-4225-9f8b-0d563fd3bba8_HP LaserJet Pro MFP M428fdn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\a69a6659-b8c9-458e-b96e-5adb33116535_MFP.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\a69a6659-b8c9-458e-b96e-5adb33116535_MFP.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\aeced1f3-8d71-4c27-b5c9-3efa34379d28_HP LaserJet Pro M428fdw.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\aeced1f3-8d71-4c27-b5c9-3efa34379d28_HP LaserJet Pro M428fdw.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\bac7160c-3149-4d58-af98-d2aa8f6f2a81_HP LaserJet pro cp1025 color.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\bac7160c-3149-4d58-af98-d2aa8f6f2a81_HP LaserJet pro cp1025 color.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\bc4d88d6-2bb6-4902-9d47-557cdc1f5094_Untitled-1.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\bc4d88d6-2bb6-4902-9d47-557cdc1f5094_Untitled-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\ca2b4bc9-557d-4099-b6da-769b8ed3ce49_HP LaserJet Pro MFP M426fdw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\ca2b4bc9-557d-4099-b6da-769b8ed3ce49_HP LaserJet Pro MFP M426fdw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\cb7a36a8-ce27-49ae-97df-2cd14bd9c69a_HP LaserJet Pro 400 Printer M401dw.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\cb7a36a8-ce27-49ae-97df-2cd14bd9c69a_HP LaserJet Pro 400 Printer M401dw.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\ceb99d3f-18f9-49dd-8806-f95de8789f2f_Thermal Printers.jpg",
+      "PackagePath": "staticwebassets\\images\\printermodels\\ceb99d3f-18f9-49dd-8806-f95de8789f2f_Thermal Printers.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\cf996dae-50b6-4625-b88b-8939cc5184e0_HP LaserJet Pro MFP M426fdw.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\cf996dae-50b6-4625-b88b-8939cc5184e0_HP LaserJet Pro MFP M426fdw.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\d979aca8-71bd-4b9b-bdc8-9d80b5fe3d57_HP Color LaserJet Pro MFP M281fdw.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\d979aca8-71bd-4b9b-bdc8-9d80b5fe3d57_HP Color LaserJet Pro MFP M281fdw.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\db771079-26f8-4908-8f44-80715617d0f4_Canon imageRUNNER 2425.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\db771079-26f8-4908-8f44-80715617d0f4_Canon imageRUNNER 2425.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\dd08611b-a781-4dca-96e1-4f4b8a06fa63_HP LaserJet Pro 400 Printer M401a.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\dd08611b-a781-4dca-96e1-4f4b8a06fa63_HP LaserJet Pro 400 Printer M401a.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\dd583b90-8973-469c-bf52-4368e06113ee_HP LaserJet Pro M404dn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\dd583b90-8973-469c-bf52-4368e06113ee_HP LaserJet Pro M404dn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\e1b7ecdd-f51c-4198-877d-fdf685c5c7ed_EPSON LQ-310.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\e1b7ecdd-f51c-4198-877d-fdf685c5c7ed_EPSON LQ-310.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\e5c1197c-5268-4d67-a17d-d332e73215f6_HP LaserJet enterprise 600 m602n.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\e5c1197c-5268-4d67-a17d-d332e73215f6_HP LaserJet enterprise 600 m602n.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\e672f6f2-c9e4-4add-af1b-527d40d59958_HP Color LaserJet Pro 400 MFP M425dw.webp",
+      "PackagePath": "staticwebassets\\images\\printermodels\\e672f6f2-c9e4-4add-af1b-527d40d59958_HP Color LaserJet Pro 400 MFP M425dw.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\ee908377-561e-46c1-ae58-bdd1ed5e1202_EPSON PLQ-20M.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\ee908377-561e-46c1-ae58-bdd1ed5e1202_EPSON PLQ-20M.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\f249c329-8759-4fe5-9948-f96fc845380f_IMG_2387.JPG",
+      "PackagePath": "staticwebassets\\images\\printermodels\\f249c329-8759-4fe5-9948-f96fc845380f_IMG_2387.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\f31762dc-1f4c-41c8-9f2e-bed8e38968b1_HP LaserJet Pro M16a Printer.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\f31762dc-1f4c-41c8-9f2e-bed8e38968b1_HP LaserJet Pro M16a Printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\f3457550-e738-465f-818e-56bf8e10ec38_HP Color LaserJet Pro M479fdn Printer.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\f3457550-e738-465f-818e-56bf8e10ec38_HP Color LaserJet Pro M479fdn Printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\printermodels\\ff912794-a8ad-4765-a1d2-cefb7bd5b0a1_HP LaserJet Pro M402dn.png",
+      "PackagePath": "staticwebassets\\images\\printermodels\\ff912794-a8ad-4765-a1d2-cefb7bd5b0a1_HP LaserJet Pro M402dn.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\sad.svg",
+      "PackagePath": "staticwebassets\\images\\sad.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\sam.jpg",
+      "PackagePath": "staticwebassets\\images\\sam.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\sara.png",
+      "PackagePath": "staticwebassets\\images\\sara.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\24e98095-aa11-4bb9-bba3-44bf1755dc08_IMG_2387.JPG",
+      "PackagePath": "staticwebassets\\images\\spareparts\\24e98095-aa11-4bb9-bba3-44bf1755dc08_IMG_2387.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\82b87913-f992-4a2d-b515-c8b068f29fc7_Untitled-1.png",
+      "PackagePath": "staticwebassets\\images\\spareparts\\82b87913-f992-4a2d-b515-c8b068f29fc7_Untitled-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\bb306feb-6db2-421d-af51-0b9d4bfc72b5_HP Color LaserJet Pro M479fdn Printer.png",
+      "PackagePath": "staticwebassets\\images\\spareparts\\bb306feb-6db2-421d-af51-0b9d4bfc72b5_HP Color LaserJet Pro M479fdn Printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\ca4a9487-eca3-4088-8ac5-cf8c33d712c5_Untitled-2.png",
+      "PackagePath": "staticwebassets\\images\\spareparts\\ca4a9487-eca3-4088-8ac5-cf8c33d712c5_Untitled-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\e704126f-5879-431f-9020-dede7f988049_Picup roller tray 110-RL2-0656-000-Tray-1-Pickup-Roller-for-HP-M402-M403-M426-M427-M428-M429.webp",
+      "PackagePath": "staticwebassets\\images\\spareparts\\e704126f-5879-431f-9020-dede7f988049_Picup roller tray 110-RL2-0656-000-Tray-1-Pickup-Roller-for-HP-M402-M403-M426-M427-M428-M429.webp"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\spareparts\\f17953ad-ee54-47be-aeaa-5e0cb3383274_Pickup roller tray 1.jpg",
+      "PackagePath": "staticwebassets\\images\\spareparts\\f17953ad-ee54-47be-aeaa-5e0cb3383274_Pickup roller tray 1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\images\\untitle.png",
+      "PackagePath": "staticwebassets\\images\\untitle.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\chat.min.js",
+      "PackagePath": "staticwebassets\\js\\chat.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\notification.js",
+      "PackagePath": "staticwebassets\\js\\notification.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signalr-functions.js",
+      "PackagePath": "staticwebassets\\js\\signalr-functions.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signalrReqHandler.js",
+      "PackagePath": "staticwebassets\\js\\signalrReqHandler.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signalrReqHandler.min.js",
+      "PackagePath": "staticwebassets\\js\\signalrReqHandler.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\signrReqHandler.js",
+      "PackagePath": "staticwebassets\\js\\signrReqHandler.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\site.min.js",
+      "PackagePath": "staticwebassets\\js\\site.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\js\\voiceRecorder.js",
+      "PackagePath": "staticwebassets\\js\\voiceRecorder.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\signalr\\signalr.js",
+      "PackagePath": "staticwebassets\\signalr\\signalr.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\signalr\\signalr.js.map",
+      "PackagePath": "staticwebassets\\signalr\\signalr.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\signalr\\signalr.min.js",
+      "PackagePath": "staticwebassets\\signalr\\signalr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\signalr\\signalr.min.js.map",
+      "PackagePath": "staticwebassets\\signalr\\signalr.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\theme-switcher.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\theme-switcher.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\cerulean\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\cerulean\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\cyborg\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\cyborg\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\default\\bootstrap.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\default\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\default\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\default\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\flatly\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\flatly\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\journal\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\journal\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\litera\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\litera\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\lumen\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\lumen\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\lux\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\lux\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\pulse\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\pulse\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\simplex\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\simplex\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\solar\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\solar\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\superhero\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\superhero\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\united\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\united\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\css\\themes\\yeti\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\switcher-resources\\css\\themes\\yeti\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\theme-controller.js",
+      "PackagePath": "staticwebassets\\switcher-resources\\theme-controller.js"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\switcher-resources\\theme.svg",
+      "PackagePath": "staticwebassets\\switcher-resources\\theme.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\43633857-d018-47ec-bb46-2a2ab997a214.webm",
+      "PackagePath": "staticwebassets\\uploads\\43633857-d018-47ec-bb46-2a2ab997a214.webm"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\AdobeStock_309435268_Preview.png",
+      "PackagePath": "staticwebassets\\uploads\\AdobeStock_309435268_Preview.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Banner-7-Rent-Printer.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Banner-7-Rent-Printer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Cam-Logo-2.png",
+      "PackagePath": "staticwebassets\\uploads\\Cam-Logo-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Digital Card.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Digital Card.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\IMG_2387.jpg",
+      "PackagePath": "staticwebassets\\uploads\\IMG_2387.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\IMG_5411.MOV",
+      "PackagePath": "staticwebassets\\uploads\\IMG_5411.MOV"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Pickup Roller Tray1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Pickup Roller Tray1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\ProcessUML.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ProcessUML.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\QR Code.png",
+      "PackagePath": "staticwebassets\\uploads\\QR Code.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Separation Roller Assembly ( from Tray 1 and Tray2).jpg",
+      "PackagePath": "staticwebassets\\uploads\\Separation Roller Assembly ( from Tray 1 and Tray2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\Swing Gear.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Swing Gear.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\busing.jpg",
+      "PackagePath": "staticwebassets\\uploads\\busing.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\d289dd5d-e78b-412e-ad36-1da4ad295792.webm",
+      "PackagePath": "staticwebassets\\uploads\\d289dd5d-e78b-412e-ad36-1da4ad295792.webm"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\d7c7f2ef-34e3-4c02-9d71-ff98bde0e91e.webm",
+      "PackagePath": "staticwebassets\\uploads\\d7c7f2ef-34e3-4c02-9d71-ff98bde0e91e.webm"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\inkjet.jpg",
+      "PackagePath": "staticwebassets\\uploads\\inkjet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\notification-icon.png",
+      "PackagePath": "staticwebassets\\uploads\\notification-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\onsiteicon.png",
+      "PackagePath": "staticwebassets\\uploads\\onsiteicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\radzen-blazor-master (1).zip",
+      "PackagePath": "staticwebassets\\uploads\\radzen-blazor-master (1).zip"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\sparepart list.pdf",
+      "PackagePath": "staticwebassets\\uploads\\sparepart list.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\sparepart list.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\sparepart list.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\sparepartlist.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\sparepartlist.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\unrepairable.png",
+      "PackagePath": "staticwebassets\\uploads\\unrepairable.png"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\ក្រសួងសេដ្ឋកិច្ចនិងហិរញ្ញវត្ថុប្រាក់ពន្ធប្រចាំខែត្រី.xlsx",
+      "PackagePath": "staticwebassets\\uploads\\ក្រសួងសេដ្ឋកិច្ចនិងហិរញ្ញវត្ថុប្រាក់ពន្ធប្រចាំខែត្រី.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\uploads\\ខែកក្កដា.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ខែកក្កដា.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ServiceMaintenance.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ServiceMaintenance.props",
+      "PackagePath": "build\\ServiceMaintenance.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ServiceMaintenance.props",
+      "PackagePath": "buildMultiTargeting\\ServiceMaintenance.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ServiceMaintenance.props",
+      "PackagePath": "buildTransitive\\ServiceMaintenance.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

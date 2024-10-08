@@ -1,0 +1,49 @@
+﻿@page "/products"
+@using ServiceMaintenance.Filters.GlobalSecurity
+@inherits PermissionBase
+
+<h1>Manage Products</h1>
+<hr />
+
+@if (CanView)
+{
+    <a href="#" class="btn btn-primary" @onclick="ViewProducts">View</a>
+}
+
+@if (CanCreate)
+{
+    <a href="#" class="btn btn-secondary" @onclick="ShowCreateProductModal">Create</a>
+}
+
+@if (CanEdit)
+{
+    <a href="#" class="btn btn-success" @onclick="ShowEditProductModal">Edit</a>
+}
+
+@if (CanDelete)
+{
+    <a href="#" class="btn btn-danger" @onclick="ShowDeleteProductModal">Delete</a>
+}
+
+@code {
+    private void ShowCreateProductModal()
+    {
+        Navigation.NavigateTo("/products/add");
+    }
+
+    private void ShowEditProductModal()
+    {
+        // Logic to show the edit product modal
+    }
+
+    private void ShowDeleteProductModal()
+    {
+       
+    }
+
+    private void ViewProducts()
+    {
+        // Logic to navigate to the view products page
+        Navigation.NavigateTo("/products/view");
+    }
+}

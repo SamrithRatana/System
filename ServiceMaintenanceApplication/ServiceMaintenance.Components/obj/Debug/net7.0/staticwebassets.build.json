@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "x2uqmJuVQazylY+yXL4nFjm5ONGvMuG7WS4gxNHRq/g=",
+  "Source": "ServiceMaintenance.Components",
+  "BasePath": "_content/ServiceMaintenance.Components",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ServiceMaintenance.Components\\wwwroot",
+      "Source": "ServiceMaintenance.Components",
+      "ContentRoot": "C:\\Users\\Admins\\source\\repos\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenance.Components\\wwwroot\\",
+      "BasePath": "_content/ServiceMaintenance.Components",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Admins\\source\\repos\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenance.Components\\wwwroot\\background.png",
+      "SourceId": "ServiceMaintenance.Components",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admins\\source\\repos\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenance.Components\\wwwroot\\",
+      "BasePath": "_content/ServiceMaintenance.Components",
+      "RelativePath": "background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\background.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admins\\source\\repos\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenance.Components\\wwwroot\\exampleJsInterop.js",
+      "SourceId": "ServiceMaintenance.Components",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admins\\source\\repos\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenanceApplication\\ServiceMaintenance.Components\\wwwroot\\",
+      "BasePath": "_content/ServiceMaintenance.Components",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    }
+  ]
+}

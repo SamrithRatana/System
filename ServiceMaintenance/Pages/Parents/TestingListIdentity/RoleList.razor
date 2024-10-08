@@ -1,0 +1,41 @@
+﻿@page "/rolelist"
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject RoleManager<IdentityRole> RoleManager
+
+<h3>Role List</h3>
+
+@if (roles == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (roles.Count == 0)
+{
+    <p>No roles found.</p>
+}
+else
+{
+    <ul>
+        @foreach (var role in roles)
+        {
+            <li>@role.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private IList<IdentityRole> roles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            roles = await RoleManager.Roles.ToListAsync();
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions (log or display an error message)
+            Console.Error.WriteLine($"An error occurred while fetching roles: {ex.Message}");
+        }
+    }
+}

@@ -1,0 +1,210 @@
+﻿@page "/technical"
+ @using ServiceMaintenance.Models
+ @inject IJSRuntime JS
+
+
+
+
+<DxToastProvider Name="Customization"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+<DxToastProvider Name="Error"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+                    
+<div class="card">
+    <div class="card-body">
+        <DxToolbar ItemRenderStyleMode="ToolbarRenderStyleMode.Plain">
+            <DxToolbarItem Text="New" Click="NewItem_Click" IconCssClass="fas fa-file" />
+            <DxToolbarItem Text="Edit" Click="EditItem_Click" IconCssClass="fas fa-edit" Enabled="@EditItemsEnabled" />
+            <DxToolbarItem Text="Delete" Click="DeleteItem_Click" IconCssClass="fas fa-trash-alt" Enabled="@EditItemsEnabled" />
+            <DxToolbarItem Text="Column Chooser" BeginGroup="true" Click="ColumnChooserItem_Click" IconCssClass="grid-toolbar-column-chooser" />
+            <DxToolbarItem Text="Export" IconCssClass="grid-toolbar-export">
+                <Items>
+                    <DxToolbarItem Text="To CSV" Click="ExportCsvItem_Click" />
+                    <DxToolbarItem Text="To XLSX" Click="ExportXlsxItem_Click" />
+                    <DxToolbarItem Text="To XLS" Click="ExportXlsItem_Click" />
+                </Items>
+            </DxToolbarItem>
+                        <DxToolbarItem Text="Print Report" Click="PrintReport_Click" IconCssClass="grid-toolbar-print" />
+
+ 
+        </DxToolbar>
+
+    </div>
+</div>
+
+<DxLayoutBreakpoint DeviceSize="DeviceSize.XSmall" @bind-IsActive="@isXSmallScreen" />
+<hr>
+<div class="h-100 grid-wrapper">
+    @*  @if (isXSmallScreen)
+    {
+    <div class="fab-container">
+    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+    IconCssClass="grid-icon-column-chooser"
+    CssClass="fab"
+    aria-label="Column Chooser"
+    Click="@ShowColumnChooser" />
+    </div>
+    }
+    else
+    {
+    <div class="align-self-start p-2">
+    <DxButton Text="Column Chooser"
+    RenderStyle="ButtonRenderStyle.Secondary"
+    IconCssClass="grid-icon-column-chooser"
+    Click="@ShowColumnChooser" />
+    </div>
+    } *@
+    @if (reportDatas == null)
+    {
+        <div class="card-body w-100">
+            <div class="card-header border-0 p-2 rounded">
+                <DxLoadingPanel IndicatorAnimationType="WaitIndicatorAnimationType.Pulse"
+                                CssClass="w-100"
+                                IndicatorVisible="@indicatorVisible"
+                                IndicatorAreaVisible="@indicatorAreaVisible"
+                                Visible="true"
+                                Text="Processing..."
+                                TextAlignment="LoadingPanelTextAlignment.Right">
+                    <div style="min-height: 250px;"></div>
+                </DxLoadingPanel>
+            </div>
+        </div>
+    }
+    else
+    {
+        <DxGrid Data="reportDatas" @ref="MyGrid" CssClass="grid-size" EditModelSaving="OnEditModelSaving" DataItemDeleting="DeleteReportItem" PopupEditFormCssClass="my-style" EditMode="GridEditMode.PopupEditForm" ShowPager="true" PageSize="10" PageSizeSelectorVisible="true" SelectionMode="GridSelectionMode.Single" AllowSelectRowByClick="true" HighlightRowOnHover="true" ShowSearchBox="true" FilterMenuButtonDisplayMode="GridFilterMenuButtonDisplayMode.Always" FocusedRowChanged="Grid_FocusedRowChanged" KeyFieldName="ID" FocusedRowEnabled="true" ColumnResizeMode="GridColumnResizeMode.NextColumn"  >
+
+            <Columns>
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.ID)" MinWidth="50" Width="5" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.ReportID)" MinWidth="100" Width="6%" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.CompanyName)" MinWidth="180"  />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Attention)" MinWidth="100" Visible="@GetExtraColumnsVisible()"/>
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Atten)" MinWidth="100" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Address)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Mobile)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.OfficeTel)" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.ProductName)" MinWidth="100" Width="8%" Visible="@GetExtraColumnsVisible()" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Instrument)" MinWidth="100" Width="20%" Visible="@GetExtraColumnsVisible()" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.SerialNumber)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.BranchSerial)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.CustomerReq)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.ActionTaken)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Solution)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Datestart)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.DateFinish)" MinWidth="80" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Engineer)" MinWidth="80" Width="8%" Visible="@GetExtraColumnsVisible()" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Verify)" MinWidth="100" Width="8%" Visible="@GetExtraColumnsVisible()" />
+                <DxGridDataColumn FieldName="@nameof(ServiceReportData.Customer)" MinWidth="100" Visible="false" />
+                <DxGridCommandColumn Width="100px">
+                    <HeaderTemplate>Info</HeaderTemplate>
+                    <CellDisplayTemplate>
+                        
+
+                            <DxButton IconCssClass="fas fa-eye" CssClass="icon-only-button" RenderStyle="ButtonRenderStyle.Info" RenderStyleMode="ButtonRenderStyleMode.Text" />
+                        <DxButton IconCssClass="fas fa-file-invoice"
+                                  CssClass="icon-only-button"
+                                  RenderStyle="ButtonRenderStyle.Secondary"
+                                  RenderStyleMode="ButtonRenderStyleMode.Text"
+                                  Click="PrintReport_Click" />
+                        <DxButton IconCssClass="fas fa-trash-alt"
+                                  CssClass="icon-only-button"
+                                  RenderStyle="ButtonRenderStyle.Danger"
+                                  RenderStyleMode="ButtonRenderStyleMode.Text"
+                                  Click="() => MyGrid.ShowDataItemDeleteConfirmation(context.DataItem)" />
+                        
+                  
+                    </CellDisplayTemplate>
+                </DxGridCommandColumn>
+            </Columns>
+            <EditFormTemplate Context="editFormContext">
+                @{
+                    var servicereport = (ServiceReportData)editFormContext.EditModel;
+                }
+                <DxFormLayout CssClass="custom-edit-form">
+                    <DxFormLayoutItem Caption="ReportID:" >
+                        <DxDateEdit @bind-Date="@servicereport.ReportID" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Company Name:">
+                        <DxTextBox @bind-Text="@servicereport.CompanyName" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Attention:">
+                        <DxMemo @bind-Text="@servicereport.Attention" BindValueMode="BindValueMode.OnInput"></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Atten:">
+                        <DxTextBox @bind-Text="@servicereport.Atten" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Address:">
+                        <DxMemo @bind-Text="@servicereport.Address" BindValueMode="BindValueMode.OnInput" ></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Mobile:">
+                        <DxTextBox @bind-Text="@servicereport.Mobile" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="OfficeTel:">
+                        <DxTextBox @bind-Text="@servicereport.OfficeTel" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="ProductName:">
+                        <DxTextBox @bind-Text="@servicereport.ProductName" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Model:">
+                        <DxTextBox @bind-Text="@servicereport.Instrument" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Serial Number:">
+                        <DxTextBox @bind-Text="@servicereport.SerialNumber" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Branch Serial:">
+                        <DxTextBox @bind-Text="@servicereport.BranchSerial" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Customer Request:">
+                        <DxMemo @bind-Text="@servicereport.CustomerReq" BindValueMode="BindValueMode.OnInput"></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Action Taken:">
+                        <DxMemo @bind-Text="@servicereport.ActionTaken" BindValueMode="BindValueMode.OnInput"></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Solution:">
+                        <DxMemo @bind-Text="@servicereport.Solution" BindValueMode="BindValueMode.OnInput"></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Date Start:">
+                        <DxDateEdit @bind-Date="@servicereport.Datestart" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Date Finish:">
+                        <DxDateEdit @bind-Date="@servicereport.DateFinish" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Engineer:">
+                        <DxTextBox @bind-Text="@servicereport.Engineer" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Verify:">
+                        <DxTextBox @bind-Text="@servicereport.Verify" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Customer:">
+                        <DxTextBox @bind-Text="@servicereport.Customer" />
+                    </DxFormLayoutItem>
+                  
+                </DxFormLayout>
+            </EditFormTemplate>
+
+        </DxGrid>
+
+    }
+    
+
+    @code {
+        DxReportViewer reportViewer;
+        XtraReport15 report;
+
+        protected override void OnInitialized()
+        {
+             
+            var query = NavigationManager.ToAbsoluteUri(NavigationManager.Uri).Query;
+            var queryParams = System.Web.HttpUtility.ParseQueryString(query);
+            var idParam = queryParams["id"];
+              
+        }
+    }
+</div>
+

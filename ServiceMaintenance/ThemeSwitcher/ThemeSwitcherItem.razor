@@ -1,0 +1,15 @@
+﻿@inject switcher.ThemeSwitcher.ThemeService Themes
+
+<a class="themeswitcher-item list-group-item list-group-item-action @Theme.GetCssClass(Themes.ActiveTheme == Theme) @Theme.IconCssClass"
+   @onclick:preventDefault
+   @onclick="Anchor_Click">
+    <span>@Theme.Title</span>
+</a>
+@code {
+    [Parameter] public switcher.ThemeSwitcher.Theme Theme { get; set; }
+    [Parameter] public EventCallback<switcher.ThemeSwitcher.Theme> Click { get; set; }
+
+    async Task Anchor_Click() {
+        await Click.InvokeAsync(Theme);
+    }
+}

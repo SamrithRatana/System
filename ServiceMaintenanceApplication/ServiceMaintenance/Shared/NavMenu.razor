@@ -1,0 +1,56 @@
+﻿<div class="sidebar @StateCssClass">
+    <DxTreeView AllowSelectNodes="true" CssClass="app-sidebar" AnimationType="LayoutAnimationType.Slide" >
+      
+        <Nodes>
+            <DxTreeViewNode NavigateUrl="./" Text="Overview" IconCssClass="fas fa-home" CssClass="nav-menu"></DxTreeViewNode>
+            <DxTreeViewNode Text="Grid" IconCssClass="fas fa-table">
+                <Nodes>
+                    <DxTreeViewNode NavigateUrl="grid" Text="Grid Overview" IconCssClass="fas fa-chart-bar"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="grid/details" Text="Grid Details" IconCssClass="fas fa-info-circle"></DxTreeViewNode>
+                </Nodes>
+            </DxTreeViewNode>
+            <DxTreeViewNode Text="DashBoard" IconCssClass="fas fa-tachometer-alt" >
+                <Nodes>
+                    <DxTreeViewNode NavigateUrl="#" Text="Home" IconCssClass="fas fa-home"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="CompanyCenter" IconCssClass="fas fa-building"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="EningeerInformation" IconCssClass="fas fa-user-friends"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Product Brand" IconCssClass="fas fa-box-open"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Category" IconCssClass="fas fa-box"></DxTreeViewNode>               
+                </Nodes>
+            </DxTreeViewNode>
+            <DxTreeViewNode Text="Item Lists" IconCssClass="fas fa-clipboard-list">
+                <Nodes>
+                    <DxTreeViewNode NavigateUrl="customerlist" Text="Company Lists" IconCssClass="fas fa-home"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Product Lists" IconCssClass="fas fa-boxes"></DxTreeViewNode>
+                </Nodes>
+            </DxTreeViewNode>
+            <DxTreeViewNode Text="TechnicalReportData" IconCssClass="fas fa-file-alt">
+                <Nodes>
+                    <DxTreeViewNode NavigateUrl="technical" Text="Technical Report" IconCssClass="fas fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="delivery" Text="Delivery Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="report" Text="Report View" IconCssClass="fas fa-eye"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Daily Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Monthly Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Custom Monthly Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Engineer Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Customer Report" IconCssClass="far fa-file"></DxTreeViewNode>
+                  
+                </Nodes>
+            </DxTreeViewNode>
+            <DxTreeViewNode Text="Spare Parts Management" IconCssClass="fas fa-cogs">
+                <Nodes>   
+                    <DxTreeViewNode NavigateUrl="#" Text="Add New" IconCssClass="fas fa-list-ol"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="Product Code" IconCssClass="fas fa-list-ol"></DxTreeViewNode>
+                    <DxTreeViewNode NavigateUrl="#" Text="OCR Code" IconCssClass="fas fa-list-ol"></DxTreeViewNode>
+                   
+                </Nodes>
+            </DxTreeViewNode>
+        </Nodes>
+    </DxTreeView>
+
+</div>
+
+@code {
+    [Parameter] public string StateCssClass { get; set; }
+
+}

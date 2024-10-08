@@ -1,0 +1,138 @@
+﻿@page "/detail/{Id:int}";
+@page "/detail";
+@using ServiceMaintenance.Models
+@using ServiceMaintenance.Services
+@inject NavigationManager Navigation
+@inject IPrinterModelService MyService 
+
+<div class="detail-page">
+    <div class="header">
+        <h1>@Title</h1>
+        <div class="actions">
+            <button class="btn btn-primary" @onclick="Edit">Edit</button>
+            <button class="btn btn-danger" @onclick="Delete">Delete</button>
+            <button class="btn btn-secondary" @onclick="GoBack">Back</button>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        @if (Model != null)
+        {
+            <div class="card">
+                <div class="card-header">
+                    <h3>Details</h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> @Model.ModelName</p>
+                    <p><strong>Description:</strong> @Model.Description</p>
+                    <p><strong>Price:</strong> @Model.ModelName</p>
+                    <!-- Add more fields as necessary -->
+                </div>
+            </div>
+        }
+        else
+        {
+            <p>Loading...</p>
+        }
+    </div>
+
+    <div class="footer">
+        <button class="btn btn-secondary" @onclick="GoBack">Back</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    public PrinterModel Model { get; set; }
+    public string Title => Id == 0 ? "Add New Item" : "Item Details";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Id > 0)
+        {
+            // Fetch the model by ID
+            Model = await MyService.GetData(Id);
+        }
+    }
+
+    private void Edit()
+    {
+        Navigation.NavigateTo($"/edit/{Id}");
+    }
+
+    private async Task Delete()
+    {
+        await MyService.DeleteData(Id);
+        Navigation.NavigateTo("/list");
+    }
+
+    private void GoBack()
+    {
+        Navigation.NavigateTo("/list");
+    }
+}
+
+  <style>
+        /* General styles */
+.detail-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header .actions button {
+    margin-left: 10px;
+}
+
+/* Detail section styles */
+.detail-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+/* Footer styles */
+.footer {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+
+
+ </style>

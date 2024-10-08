@@ -1,0 +1,94 @@
+﻿<div class="sidebar @StateCssClass">
+    <AuthorizeView>
+        <Authorized Context="authorizedContext">
+            <DxTreeView AllowSelectNodes="true" CssClass="app-sidebar" AnimationType="LayoutAnimationType.Slide">
+                <Nodes>
+                    <a class="nav-title d-block d-md-none" href="/">Service Checklist Management</a>
+                    <DxTreeViewNode NavigateUrl="./" Text="Overview" IconCssClass="fas fa-home" CssClass="nav-menu"></DxTreeViewNode>
+
+                    <!-- Home Node with Sub-Nodes -->
+                    <DxTreeViewNode Text="Home" IconCssClass="fas fa-home">
+                        <Nodes>
+                            <AuthorizeView Policy="ModuleDashBoardAccess">
+                              <Authorized Context="Authorizedashboard">
+                            <DxTreeViewNode NavigateUrl="dashboard" Text="DashBoard Overview" IconCssClass="fas fa-tachometer-alt"></DxTreeViewNode>
+                                </Authorized>
+                            </AuthorizeView>
+                            <AuthorizeView Policy="ModuleCustomerAccess">
+                              <Authorized Context="Authorizecustomer">
+                            <DxTreeViewNode NavigateUrl="customerlist" Text="Customer Information" IconCssClass="fas fa-building"></DxTreeViewNode>
+                                </Authorized>
+                            </AuthorizeView>
+                            <DxTreeViewNode NavigateUrl="#" Text="Engineer Information" IconCssClass="fas fa-user-friends"></DxTreeViewNode>
+                        </Nodes>
+                    </DxTreeViewNode>
+
+                    <!-- Item Lists Node with Sub-Nodes -->
+                    <DxTreeViewNode Text="Item Lists" IconCssClass="fas fa-clipboard-list">
+                        <Nodes>
+                            <DxTreeViewNode NavigateUrl="/manufacturer" Text="Category" IconCssClass="fas fa-tags"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="/spareparts" Text="SparePart Inventory" IconCssClass="fas fa-cogs"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="/itemModel" Text="Items Inventory" IconCssClass="fas fa-wrench"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="/PrinterModelList" Text="PrinterModel Inventory" IconCssClass="fas fa-wrench"></DxTreeViewNode>
+                        </Nodes>
+                    </DxTreeViewNode>
+
+                    <!-- Tracker Node with Sub-Nodes -->
+                    <DxTreeViewNode Text="Tracker" IconCssClass="fas fa-tasks">
+                        <Nodes>
+                            <DxTreeViewNode NavigateUrl="repairservices" Text="Add ServiceTracker Entries" IconCssClass="fas fa-plus-square"></DxTreeViewNode>
+                        </Nodes>
+                    </DxTreeViewNode>
+
+                    <!-- Reports Node with Sub-Nodes -->
+                    <DxTreeViewNode Text="Reports" IconCssClass="fas fa-file-alt">
+                        <Nodes>
+                            <DxTreeViewNode NavigateUrl="technical" Text="Technical Service Report" IconCssClass="fas fa-file-alt"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="delivery" Text="Report View" IconCssClass="fas fa-eye"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="/reportDetail" Text="Daily Activity Report" IconCssClass="fas fa-calendar-day"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="#" Text="Monthly Performance Report" IconCssClass="fas fa-chart-line"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="#" Text="Custom Monthly Report" IconCssClass="fas fa-chart-pie"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="#" Text="Engineer Report" IconCssClass="fas fa-user-tie"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="#" Text="Customer Report" IconCssClass="fas fa-users"></DxTreeViewNode>
+                        </Nodes>
+                    </DxTreeViewNode>
+
+                    <AuthorizeView Policy="ModuleProductsAccess">
+                        <Authorized Context="InboxModule">
+                    <DxTreeViewNode Text="Inbox" IconCssClass="fas fa-inbox">
+                        <Nodes>
+                            <DxTreeViewNode NavigateUrl="#" Text="Messages Center" IconCssClass="fas fa-envelope"></DxTreeViewNode>
+                            <DxTreeViewNode NavigateUrl="userlist" Text="Account Management" IconCssClass="fas fa-user-cog"></DxTreeViewNode>
+                        </Nodes>
+                    </DxTreeViewNode>
+                        </Authorized>
+                    </AuthorizeView>
+                    <AuthorizeView Roles="SuperAdmin,Admin">
+                        <Authorized Context="ForAdmin">
+                    <DxTreeViewNode Text="Authentication" IconCssClass="fas fa-lock">
+                        <Nodes>
+                          
+                                    <DxTreeViewNode NavigateUrl="users" Text="User Assignment" IconCssClass="fas fa-user-tag"></DxTreeViewNode>
+                                    <DxTreeViewNode NavigateUrl="roles" Text="Role Permission" IconCssClass="fas fa-user-shield"></DxTreeViewNode>
+                               
+                        </Nodes>
+                    </DxTreeViewNode>
+                        </Authorized>
+                    </AuthorizeView>
+
+                </Nodes>
+            </DxTreeView>
+        </Authorized>
+        <NotAuthorized Context="guestContext">
+            <DxTreeView AllowSelectNodes="true" CssClass="app-sidebar" AnimationType="LayoutAnimationType.Slide">
+                <Nodes>
+                    <DxTreeViewNode NavigateUrl="/identity/account/login" Text="Login" IconCssClass="oi oi-lock-locked" />
+                </Nodes>
+            </DxTreeView>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code {
+    [Parameter] public string StateCssClass { get; set; }
+}

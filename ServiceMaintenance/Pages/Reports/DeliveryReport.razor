@@ -1,0 +1,14 @@
+﻿@page "/delivery"
+
+<DxReportViewer Report="@Report" />
+
+@code {
+    private Report1 Report;
+
+    protected override void OnInitialized()
+    {
+        Report = new Report1();
+    
+    }
+
+}

@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\pages\\parents\\repairservicemodule\\repairserviceslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\pages\\parents\\repairservicemodule\\repairserviceslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\pages\\parents\\itemmodule\\itemmodellist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\pages\\parents\\itemmodule\\itemmodellist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\pages\\reports\\report2.cs||{95027D70-C6B4-4736-8A48-AD3582187321}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\pages\\reports\\report2.cs||{95027D70-C6B4-4736-8A48-AD3582187321}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F75CCB19-C7AB-44A6-9F7D-B441405F1BAC}|ServiceMaintenance.Models\\ServiceMaintenance.Models.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance.models\\repairservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F75CCB19-C7AB-44A6-9F7D-B441405F1BAC}|ServiceMaintenance.Models\\ServiceMaintenance.Models.csproj|solutionrelative:servicemaintenance.models\\repairservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|c:\\users\\admins\\dev\\servicemaintenanceapplication\\servicemaintenance\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DF26AAB0-39A4-4276-8303-D872140E8BE3}|ServiceMaintenance\\ServiceMaintenance.csproj|solutionrelative:servicemaintenance\\wwwroot\\css\\chat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "ServiceMaintenance\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T06:51:32.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Report2.cs",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Reports\\Report2.cs",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\Pages\\Reports\\Report2.cs",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Reports\\Report2.cs",
+              "RelativeToolTip": "ServiceMaintenance\\Pages\\Reports\\Report2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T06:49:53.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemModelList.razor",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Parents\\ItemModule\\ItemModelList.razor",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\Pages\\Parents\\ItemModule\\ItemModelList.razor",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Parents\\ItemModule\\ItemModelList.razor",
+              "RelativeToolTip": "ServiceMaintenance\\Pages\\Parents\\ItemModule\\ItemModelList.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T06:19:12.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RepairServices.cs",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance.Models\\RepairServices.cs",
+              "RelativeDocumentMoniker": "ServiceMaintenance.Models\\RepairServices.cs",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance.Models\\RepairServices.cs",
+              "RelativeToolTip": "ServiceMaintenance.Models\\RepairServices.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wCEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T06:01:06.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "chat.css",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\chat.css",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\wwwroot\\css\\chat.css",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\chat.css",
+              "RelativeToolTip": "ServiceMaintenance\\wwwroot\\css\\chat.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-07T05:55:28.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ServiceMaintenance\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAUwIcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-07T05:55:25.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Index.razor",
+              "RelativeToolTip": "ServiceMaintenance\\Pages\\Index.razor",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAIkBAACMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T05:30:48.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RepairServicesList.razor",
+              "DocumentMoniker": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Parents\\RepairServiceModule\\RepairServicesList.razor",
+              "RelativeDocumentMoniker": "ServiceMaintenance\\Pages\\Parents\\RepairServiceModule\\RepairServicesList.razor",
+              "ToolTip": "C:\\Users\\Admins\\Dev\\ServiceMaintenanceApplication\\ServiceMaintenance\\Pages\\Parents\\RepairServiceModule\\RepairServicesList.razor",
+              "RelativeToolTip": "ServiceMaintenance\\Pages\\Parents\\RepairServiceModule\\RepairServicesList.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T04:50:48.174Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

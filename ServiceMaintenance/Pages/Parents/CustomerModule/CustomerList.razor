@@ -1,0 +1,145 @@
+﻿@page "/customerlist"
+
+@using ServiceMaintenance.Models
+@using ServiceMaintenance.Services
+@using ServiceMaintenance.Filters.GlobalSecurity
+@inject IJSRuntime JSRuntime
+@inject ICustomerService CustomerService
+@inherits PermissionBase
+
+<DxToastProvider Name="Customization"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+<DxToastProvider Name="Error"
+                 MaxToastCount="5"
+                 HorizontalAlignment="HorizontalAlignment.Right"
+                 VerticalAlignment="VerticalEdge.Top"
+                 AnimationType="@Animation" />
+
+<div class="card">
+    <div class="card-body">
+        <DxToolbar ItemRenderStyleMode="ToolbarRenderStyleMode.Plain">
+            @if (CanCreate)
+            {
+                <DxToolbarItem Text="New" Click="NewItem_Click" IconCssClass="grid-toolbar-new" />
+
+            }
+            @if (CanEdit)
+            {
+                <DxToolbarItem Text="Edit" Click="EditItem_Click" IconCssClass="grid-toolbar-edit" Enabled="@EditItemsEnabled" />
+
+            }
+             @if (CanDelete)
+            {
+                <DxToolbarItem Text="Delete" Click="DeleteItem_Click" IconCssClass="grid-toolbar-delete" Enabled="@EditItemsEnabled" />
+
+            }
+            <DxToolbarItem Text="Column Chooser" BeginGroup="true" Click="ColumnChooserItem_Click" IconCssClass="grid-toolbar-column-chooser" />
+            <DxToolbarItem Text="Export" IconCssClass="grid-toolbar-export">
+                <Items>
+                    <DxToolbarItem Text="To CSV" Click="ExportCsvItem_Click" />
+                    <DxToolbarItem Text="To XLSX" Click="ExportXlsxItem_Click" />
+                    <DxToolbarItem Text="To XLS" Click="ExportXlsItem_Click" />
+                </Items>
+            </DxToolbarItem>
+            <DxToolbarItem Text="Print Report" Click="PrintReport_Click" IconCssClass="grid-toolbar-print" />
+        </DxToolbar>
+    </div>
+</div>
+
+<DxLayoutBreakpoint DeviceSize="DeviceSize.XSmall" @bind-IsActive="@isXSmallScreen" />
+<hr>
+<div class="h-100 grid-wrapper">
+    @if (customers == null)
+    {
+        <div class="card-body w-100">
+            <div class="card-header border-0 p-2 rounded">
+                <DxLoadingPanel IndicatorAnimationType="WaitIndicatorAnimationType.Pulse"
+                                CssClass="w-100"
+                                IndicatorVisible="@indicatorVisible"
+                                IndicatorAreaVisible="@indicatorAreaVisible"
+                                Visible="true"
+                                Text="Processing..."
+                                TextAlignment="LoadingPanelTextAlignment.Right">
+                    <div style="min-height: 250px;"></div>
+                </DxLoadingPanel>
+            </div>
+        </div>
+    }
+    else
+    {
+        <DxGrid Data="customers" @ref="MyGrid" CssClass="grid-size" EditModelSaving="OnEditModelSaving" DataItemDeleting="DeleteItem_Click" PopupEditFormCssClass="my-style" EditMode="GridEditMode.PopupEditForm" ShowPager="true" PageSize="10" PageSizeSelectorVisible="true" SelectionMode="GridSelectionMode.Single" AllowSelectRowByClick="true" HighlightRowOnHover="true" ShowSearchBox="true" FilterMenuButtonDisplayMode="GridFilterMenuButtonDisplayMode.Always" FocusedRowChanged="Grid_FocusedRowChanged" KeyFieldName="ID" FocusedRowEnabled="true" ColumnResizeMode="GridColumnResizeMode.NextColumn">
+            <Columns>
+                <DxGridDataColumn FieldName="@nameof(Customer.ID)" MinWidth="50" Width="5" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.ListId)" MinWidth="100" Width="6%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.CompanyName)" MinWidth="180" />
+                <DxGridDataColumn FieldName="@nameof(Customer.ContactName)" MinWidth="100" />
+                <DxGridDataColumn FieldName="@nameof(Customer.Address)" MinWidth="80" />
+                <DxGridDataColumn FieldName="@nameof(Customer.Phone)" MinWidth="80" />
+                <DxGridDataColumn FieldName="@nameof(Customer.Email)" MinWidth="100" />
+                <DxGridDataColumn FieldName="@nameof(Customer.CustomerTypeListId)" MinWidth="100" Width="8%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.VATTIN)" MinWidth="100" Width="8%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.BankAccountListId)" MinWidth="100" Width="8%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.InvoiceType)" MinWidth="50" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.SalesRepListId)" MinWidth="100" Width="8%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.TermListId)" MinWidth="100" Width="8%" Visible="false" />
+                <DxGridDataColumn FieldName="@nameof(Customer.IsActive)" MinWidth="50" />
+                <DxGridCommandColumn Width="50px">
+                    <HeaderTemplate>Info</HeaderTemplate>
+                    <CellDisplayTemplate>
+                        <DxButton IconCssClass="fas fa-eye" CssClass="icon-only-button" RenderStyle="ButtonRenderStyle.Info" RenderStyleMode="ButtonRenderStyleMode.Text" />
+                    </CellDisplayTemplate>
+                </DxGridCommandColumn>
+            </Columns>
+            <EditFormTemplate Context="editFormContext">
+                @{
+                    var customer = (Customer)editFormContext.EditModel;
+                }
+                <DxFormLayout CssClass="custom-edit-form">
+                    <DxFormLayoutItem Caption="List ID:">
+                        <DxTextBox @bind-Text="@customer.ListId" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Company Name:">
+                        <DxTextBox @bind-Text="@customer.CompanyName" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Contact Name:">
+                        <DxTextBox @bind-Text="@customer.ContactName" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Address:">
+                        <DxMemo @bind-Text="@customer.Address" BindValueMode="BindValueMode.OnInput"></DxMemo>
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Phone:">
+                        <DxTextBox @bind-Text="@customer.Phone" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Email:">
+                        <DxTextBox @bind-Text="@customer.Email" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Customer Type List ID:">
+                        <DxTextBox @bind-Text="@customer.CustomerTypeListId" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="VAT TIN:">
+                        <DxTextBox @bind-Text="@customer.VATTIN" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Bank Account List ID:">
+                        <DxTextBox @bind-Text="@customer.BankAccountListId" />
+                 @*    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Invoice Type:">
+                        <DxTextBox @bind-Text="@customer.InvoiceType" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Sales Rep List ID:">
+                        <DxTextBox @bind-Text="@customer.SalesRepListId" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Term List ID:">
+                        <DxTextBox @bind-Text="@customer.TermListId" />
+                    </DxFormLayoutItem>
+                    <DxFormLayoutItem Caption="Is Active:">
+                    <DxCheckBox @bind-Checked="@customer.IsActive" />*@
+                    </DxFormLayoutItem> 
+                </DxFormLayout>
+            </EditFormTemplate>
+        </DxGrid>
+    }
+</div>
+

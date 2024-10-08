@@ -1,0 +1,13 @@
+﻿<div class="bottom-nav-menu">
+    <button @onclick="NavigateToHome">Home</button>
+    <button @onclick="NavigateToProfile">Profile</button>
+    <button @onclick="NavigateToSettings">Settings</button>
+</div>
+
+@code {
+    [Inject] NavigationManager NavigationManager { get; set; }
+
+    void NavigateToHome() => NavigationManager.NavigateTo("/");
+    void NavigateToProfile() => NavigationManager.NavigateTo("/profile");
+    void NavigateToSettings() => NavigationManager.NavigateTo("/settings");
+}
